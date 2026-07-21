@@ -1,5 +1,8 @@
-:root{
-    
+:root {
+  --white-text: #fff;
+  --text: #3c322d;
+  --font-text: "Montserrat";
+  --font-title: "Montserrat Alternates";
 }
 
 *,
@@ -12,7 +15,86 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Эля */
+/* header */
+.header {
+  padding-top: 36px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  margin-left: 0;
+}
+
+.header__logo {
+  width: 158px;
+  height: 70px;
+}
+
+.header__list {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link {
+  width: 74px;
+  height: 22px;
+  font-family: var(--font-text);
+  color: var(--text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* hero */
+.hero .container {
+  margin-left: 0;
+}
+
+.hero__title {
+  color: var(--text);
+  font-family: var(--font-title);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 65px;
+  width: 757px;
+  height: 130px;
+  margin-bottom: 20px;
+  margin-top: 65px;
+}
+
+.hero__text {
+  color: var(--text);
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 28px;
+}
+
+.hero__btn {
+  color: var(--white-text);
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 25px;
+  background: #f3848c;
+  width: 145px;
+  height: 40px;
+  box-shadow: 10px 15px 25px 0 rgba(232, 183, 183, 0.45);
+  border: none;
+}
+
+/* Эля */
