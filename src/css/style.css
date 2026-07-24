@@ -13,6 +13,8 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
+  --color-primary: #ff8a9e;
+  --color-primary-hover: #ff7188;
 
   --font-family: 'Poppins', sans-serif;
 
@@ -720,6 +722,23 @@ body {
 .contact__social-link:hover {
   color: #ff8a9e;
 }
+.contact__socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact__social-icon {
+  width: 24px;
+  height: 24px;
+fill: var(--icon-color);;
+  transition: fill 0.3s ease;
+}
+
+.contact__social-link:hover .contact__social-icon {
+  fill: var(--color-primary-hover);
+}
+
 
 @media (min-width: 768px) {
   .reviews {
