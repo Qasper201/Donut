@@ -136,3 +136,712 @@
 
 
 /* Эля */
+/* Саня */
+.price {
+  position: relative;
+  padding: 60px 0;
+  background-color: #fdf3f0;
+  overflow: hidden;
+}
+
+.price::before,
+.price::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 20px solid rgba(0, 0, 0, 0.04);
+}
+
+.price::before {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  right: 10%;
+}
+
+.price::after {
+  width: 90px;
+  height: 90px;
+  bottom: 60px;
+  left: 5%;
+}
+
+.price__title {
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2b1c17;
+  margin-bottom: 40px;
+}
+
+.price__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.price-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  border-color: #f6a89a;
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(224, 122, 95, 0.15);
+  z-index: 2;
+}
+
+.price-card__title {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b1c17;
+  margin-bottom: 24px;
+}
+
+.price-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4a3d38;
+}
+
+.price-card__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f6a89a;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-card__btn {
+  margin-top: auto;
+  align-self: center;
+  width: 100%;
+  max-width: 220px;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  background-color: #f6a89a;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-card__btn:hover {
+  background-color: #f18e7c;
+}
+
+.registration {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.registration::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 8%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 20px solid rgba(243, 132, 140, 0.15);
+}
+
+.registration__title {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.registration-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
+}
+
+.registration-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.registration-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.registration-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+
+.registration-card__content {
+  position: relative;
+  z-index: 2;
+  color: var(--white-text);
+}
+
+.registration-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.registration-card__date,
+.registration-card__location,
+.registration-card__subtitle {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.registration-card__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registration-card__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--white-text);
+  font-family: var(--font-text);
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.registration-card__input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.registration-card__input:focus {
+  outline: none;
+  border-color: var(--white-text);
+}
+
+.registration-card__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.registration-card__btn {
+  width: 85%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  background: #f3848c;
+  color: var(--white-text);
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 10px 15px 25px rgba(232, 183, 183, 0.35);
+  transition: background-color 0.3s ease;
+}
+
+.registration-card__btn:hover {
+  background: #f18e7c;
+}
+
+
+
+
+.registration-card--mobile {
+  display: block;
+  padding: 40px 24px;
+}
+
+.registration-card--mobile .registration-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.registration-card--mobile .registration-card__fields {
+  width: 100%;
+  text-align: left;
+}
+
+
+
+/* ---------- DESKTOP CARD ---------- */
+@media (min-width:768px){
+
+  .price__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .price-card {
+    flex: 1;
+  }
+
+
+}
+/*Саня*/
+/* Іван */
+:root {
+  --color-bg: #fcfcfc;
+  --color-primary: #ff8a9e;
+  --color-primary-hover: #ff7188;
+  --color-text-main: #4a4a4a;
+  --color-text-dark: #333333;
+  --color-text-muted: #888888;
+  --color-text-light: #666666;
+  --color-border: #cccccc;
+  --color-star-active: #ffcc00;
+  --color-star-inactive: #e2e2e2;
+
+  --font-family: 'Poppins', sans-serif;
+
+  --avatar-left-size: 100px;
+  --avatar-center-size: 130px;
+  --avatar-right-size: 100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.reviews {
+  padding: 40px 15px;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews__title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: var(--color-text-dark);
+}
+
+.reviews__slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  padding-top: 20px;
+}
+
+.reviews__photos-container {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+
+.reviews__user-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.reviews__user-card--left {
+  left: 5%;
+  top: 10px;
+  z-index: 1;
+}
+
+.reviews__user-card--right {
+  right: 5%;
+  top: 0px;
+  z-index: 1;
+}
+
+.reviews__user-card--center {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  z-index: 2;
+}
+
+.reviews__photo-holder {
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+}
+
+.reviews__user-card--left .reviews__photo-holder {
+  width: var(--avatar-left-size);
+  height: var(--avatar-left-size);
+}
+
+.reviews__user-card--right .reviews__photo-holder {
+  width: var(--avatar-right-size);
+  height: var(--avatar-right-size);
+}
+
+.reviews__user-card--center .reviews__photo-holder {
+  width: var(--avatar-center-size);
+  height: var(--avatar-center-size);
+  border: 4px solid var(--color-bg);
+}
+
+.reviews__user-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reviews__stars {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+}
+
+.reviews__star {
+  font-size: 13px;
+  color: var(--color-star-inactive);
+}
+
+.reviews__star--active {
+  color: var(--color-star-active);
+}
+
+.reviews__username {
+  font-size: 12px;
+  font-weight: 500;
+  color: #444444;
+  margin: 4px 0 0 0;
+}
+
+.reviews__content {
+  max-width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.reviews__text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+}
+
+.reviews__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.reviews__pagination::before,
+.reviews__pagination::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+
+.reviews__page-number {
+  font-size: 12px;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.reviews__decor {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 138, 158, 0.15);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reviews__decor--circle-1 {
+  width: 40px;
+  height: 40px;
+  left: 2%;
+  top: 10%;
+}
+
+.reviews__decor--circle-2 {
+  width: 30px;
+  height: 30px;
+  left: 25%;
+  bottom: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.reviews__decor--circle-3 {
+  width: 50px;
+  height: 50px;
+  right: 4%;
+  top: 0%;
+}
+
+.contact {
+  padding: 40px 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--color-text-dark);
+}
+
+.contact__subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 30px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contact__field {
+  width: 100%;
+}
+
+.contact__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+  padding: 8px 0;
+  font-size: 14px;
+  outline: none;
+  color: var(--color-text-dark);
+  transition: border-color 0.3s;
+}
+
+.contact__input:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+.contact__button {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 40px;
+  font-size: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 138, 158, 0.4);
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.contact__button:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.contact__socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact__social-link {
+  color: var(--color-text-dark);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact__social-link:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --avatar-left-size: 180px;
+    --avatar-center-size: 250px;
+    --avatar-right-size: 180px;
+  }
+
+  .reviews {
+    padding: 60px 20px;
+  }
+
+  .reviews__title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .reviews__slider {
+    margin-bottom: 5px;
+    padding-top: 40px;
+  }
+
+  .reviews__photos-container {
+    height: 350px;
+  }
+
+  .reviews__user-card--left {
+    left: 8%;
+  }
+
+  .reviews__user-card--right {
+    right: 8%;
+  }
+
+  .reviews__user-card--center {
+    top: 30px;
+  }
+
+  .reviews__stars {
+    margin-top: 10px;
+  }
+
+  .reviews__star {
+    font-size: 16px;
+  }
+
+  .reviews__username {
+    font-size: 15px;
+  }
+
+  .reviews__text {
+    font-size: 15px;
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+  }
+
+  .contact {
+    padding: 60px 20px 40px 20px;
+  }
+
+  .contact__title {
+    font-size: 32px;
+  }
+
+  .contact__subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .contact__button {
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --avatar-left-size: 285px;
+    --avatar-center-size: 394px;
+    --avatar-right-size: 288px;
+  }
+
+  .reviews__photos-container {
+    height: 480px;
+  }
+
+  .reviews__user-card--left {
+    left: 5%;
+    top: 0;
+  }
+
+  .reviews__user-card--right {
+    right: 5%;
+    top: 0;
+  }
+
+  .reviews__user-card--center {
+    top: 60px;
+  }
+
+  .reviews__decor--circle-1 {
+    width: 80px;
+    height: 80px;
+    left: 2%;
+  }
+
+  .reviews__decor--circle-2 {
+    width: 50px;
+    height: 50px;
+    left: 30%;
+  }
+
+  .reviews__decor--circle-3 {
+    width: 100px;
+    height: 100px;
+    right: 4%;
+  }
+}
