@@ -120,6 +120,18 @@
   box-shadow: 10px 15px 25px 0 rgba(232, 183, 183, 0.45);
   border: none;
 }
+.hero__list {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.hero__icon {
+  fill: var(--text);
+}
+.hero__icon:hover, .hero__icon:focus {
+  fill: #F3848C;
+}
 
 /* about-us */
 .about-us .container {
@@ -439,7 +451,7 @@
 
 /* ---------- DESKTOP CARD ---------- */
 
-@media (min-width:768px){
+@media (min-width:768px) {
 
   .price__list {
     flex-direction: row;
@@ -449,6 +461,7 @@
   .price-card {
     flex: 1;
   }
+}
 /*Саня*/
 /* Іван */
 body {
