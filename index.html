@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
@@ -244,7 +248,7 @@
           <h2 class="price__title">Price</h2>
 
           <div class="price__list">
-            
+            <!-- Card 1 -->
             <div class="price-card">
               <h3 class="price-card__title">Easy start</h3>
               <ul class="price-card__features">
@@ -269,7 +273,7 @@
               <button class="price-card__btn">Register</button>
             </div>
 
-            
+            <!-- Card 2 - featured -->
             <div class="price-card price-card--featured">
               <h3 class="price-card__title">I want delicious donuts</h3>
               <ul class="price-card__features">
@@ -302,7 +306,7 @@
               <button class="price-card__btn">Register</button>
             </div>
 
-            
+            <!-- Card 3 -->
             <div class="price-card">
               <h3 class="price-card__title">Premium</h3>
               <ul class="price-card__features">
@@ -347,9 +351,85 @@
       <!--Саня-->
 
       <!--Ваня-->
-      <section class="rewiews">
-        <div class="container"></div>
-      </section>
+     <section class="reviews">
+      <h2 class="reviews__title">Reviews</h2>
+
+      <div class="reviews__slider">
+
+  <div class="reviews__decor reviews__decor--circle-1"></div>
+  <div class="reviews__decor reviews__decor--circle-2"></div>
+  <div class="reviews__decor reviews__decor--circle-3"></div>
+
+  <div class="reviews__photos-container">
+   
+ <div class="reviews__user-card reviews__user-card--left">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./imgs/John@1.png 1x, ./imgs/John@2.png 2x">
+      <img src="./imgs/John@1.png" alt="John" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star">★</span>
+  </div>
+  <h3 class="reviews__username">John</h3>
+</div>
+
+<div class="reviews__user-card reviews__user-card--center">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./imgs/Will@1.png 1x, ./imgs/Will@2.png 2x">
+      <img src="./imgs/Will@1.png" alt="Will" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+  </div>
+  <h3 class="reviews__username">Will</h3>
+</div>
+
+<div class="reviews__user-card reviews__user-card--right">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./imgs/Elisabeth@1.png 1x, ./imgs/Elisabeth@2.png 2x">
+      <img src="./imgs/Elisabeth@1.png" alt="Elisabeth" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+    <span class="reviews__star reviews__star--active">★</span>
+  </div>
+  <h3 class="reviews__username">Elisabeth</h3>
+</div>
+
+  </div>
+</div>
+      </div>
+
+      <div class="reviews__content">
+        <p class="reviews__text">
+          Last time I have visited a cooking course by Eva I was impressed with
+          the way she explained everything to people. You can be sure you will
+          manage to cook a delicious dish even if it is your first time in the
+          kitchen! Thank you so much for the masterclass! Looking forward to the
+          next one and highly recommend it to everyone!
+        </p>
+        <div class="reviews__pagination">
+          <span class="reviews__page-number">2/15</span>
+        </div>
+      </div>
+    </section>
       <!--Ваня-->
 
       <!--Саня-->
@@ -357,7 +437,7 @@
         <div class="container">
           <h2 class="registration__title">Registration</h2>
 
-          
+          <!-- MOBILE VERSION -->
           <div class="registration-card registration-card--mobile">
             <img
               class="registration-card__img"
@@ -408,10 +488,43 @@
       <!--Саня-->
 
       <!--Ваня-->
-      <section class="contact">
-        <div class="container"></div>
-      </section>
-      <!--Ваня-->
+    < <section class="contact">
+      <h2 class="contact__title">Contact</h2>
+      <p class="contact__subtitle">We will answer any question!</p>
+
+      <form class="contact__form">
+        <div class="contact__field">
+          <input
+            type="email"
+            placeholder="Email"
+            class="contact__input"
+            required
+          />
+        </div>
+        <div class="contact__field">
+          <input
+            type="text"
+            placeholder="Type your question"
+            class="contact__input"
+            required
+          />
+        </div>
+        <button type="submit" class="contact__button">Send</button>
+      </form>
+
+      <div class="contact__socials">
+        <a href="#" class="contact__social-link"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" class="contact__social-link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="contact__social-link"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+    </section>
+  <!--Ваня-->
     </main>
 
     <footer>
