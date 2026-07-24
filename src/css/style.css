@@ -3,6 +3,22 @@
   --text: #3c322d;
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
+   --color-bg: #fcfcfc;
+  --color-primary: #ff8a9e;
+  --color-primary-hover: #ff7188;
+  --color-text-main: #4a4a4a;
+  --color-text-dark: #333333;
+  --color-text-muted: #888888;
+  --color-text-light: #666666;
+  --color-border: #cccccc;
+  --color-star-active: #ffcc00;
+  --color-star-inactive: #e2e2e2;
+
+  --font-family: 'Poppins', sans-serif;
+
+  --avatar-left-size: 100px;
+  --avatar-center-size: 130px;
+  --avatar-right-size: 100px;
 }
 
 *,
@@ -136,7 +152,10 @@
 
 
 /* Эля */
+
 /* Саня */
+
+
 .price {
   position: relative;
   padding: 60px 0;
@@ -417,6 +436,7 @@
 
 
 /* ---------- DESKTOP CARD ---------- */
+
 @media (min-width:768px){
 
   .price__list {
@@ -427,42 +447,14 @@
   .price-card {
     flex: 1;
   }
-
-
-}
 /*Саня*/
 /* Іван */
-:root {
-  --color-bg: #fcfcfc;
-  --color-primary: #ff8a9e;
-  --color-primary-hover: #ff7188;
-  --color-text-main: #4a4a4a;
-  --color-text-dark: #333333;
-  --color-text-muted: #888888;
-  --color-text-light: #666666;
-  --color-border: #cccccc;
-  --color-star-active: #ffcc00;
-  --color-star-inactive: #e2e2e2;
-
-  --font-family: 'Poppins', sans-serif;
-
-  --avatar-left-size: 100px;
-  --avatar-center-size: 130px;
-  --avatar-right-size: 100px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family);
-  background-color: var(--color-bg);
-  color: var(--color-text-main);
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcfcfc;
+  color: #4a4a4a;
 }
 
 .reviews {
@@ -477,7 +469,7 @@ body {
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 30px;
-  color: var(--color-text-dark);
+  color: #333333;
 }
 
 .reviews__slider {
@@ -529,19 +521,19 @@ body {
 }
 
 .reviews__user-card--left .reviews__photo-holder {
-  width: var(--avatar-left-size);
-  height: var(--avatar-left-size);
+  width: 100px;
+  height: 100px;
 }
 
 .reviews__user-card--right .reviews__photo-holder {
-  width: var(--avatar-right-size);
-  height: var(--avatar-right-size);
+  width: 100px;
+  height: 100px;
 }
 
 .reviews__user-card--center .reviews__photo-holder {
-  width: var(--avatar-center-size);
-  height: var(--avatar-center-size);
-  border: 4px solid var(--color-bg);
+  width: 130px;
+  height: 130px;
+  border: 4px solid #fcfcfc;
 }
 
 .reviews__user-img {
@@ -559,11 +551,11 @@ body {
 
 .reviews__star {
   font-size: 13px;
-  color: var(--color-star-inactive);
+  color: #e2e2e2;
 }
 
 .reviews__star--active {
-  color: var(--color-star-active);
+  color: #ffcc00;
 }
 
 .reviews__username {
@@ -576,13 +568,13 @@ body {
 .reviews__content {
   max-width: 100%;
   padding: 0 10px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
 }
 
 .reviews__text {
   font-size: 13px;
   line-height: 1.5;
-  color: var(--color-text-light);
+  color: #666666;
   margin-bottom: 20px;
 }
 
@@ -599,12 +591,12 @@ body {
   display: block;
   width: 20px;
   height: 1px;
-  background-color: var(--color-primary);
+  background-color: #ff8a9e;
 }
 
 .reviews__page-number {
   font-size: 12px;
-  color: var(--color-text-main);
+  color: #4a4a4a;
   font-weight: 500;
 }
 
@@ -654,12 +646,12 @@ body {
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 8px;
-  color: var(--color-text-dark);
+  color: #333333;
 }
 
 .contact__subtitle {
   font-size: 13px;
-  color: var(--color-text-muted);
+  color: #888888;
   margin-bottom: 30px;
 }
 
@@ -679,21 +671,21 @@ body {
 .contact__input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid #cccccc;
   background: transparent;
   padding: 8px 0;
   font-size: 14px;
   outline: none;
-  color: var(--color-text-dark);
+  color: #333333;
   transition: border-color 0.3s;
 }
 
 .contact__input:focus {
-  border-bottom-color: var(--color-primary);
+  border-bottom-color: #ff8a9e;
 }
 
 .contact__button {
-  background: var(--color-primary);
+  background: #ff8a9e;
   color: #ffffff;
   border: none;
   padding: 10px 40px;
@@ -708,7 +700,7 @@ body {
 }
 
 .contact__button:hover {
-  background: var(--color-primary-hover);
+  background: #ff7188;
   transform: translateY(-2px);
 }
 
@@ -719,23 +711,17 @@ body {
 }
 
 .contact__social-link {
-  color: var(--color-text-dark);
+  color: #333333;
   font-size: 18px;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact__social-link:hover {
-  color: var(--color-primary);
+  color: #ff8a9e;
 }
 
 @media (min-width: 768px) {
-  :root {
-    --avatar-left-size: 180px;
-    --avatar-center-size: 250px;
-    --avatar-right-size: 180px;
-  }
-
   .reviews {
     padding: 60px 20px;
   }
@@ -752,6 +738,21 @@ body {
 
   .reviews__photos-container {
     height: 350px;
+  }
+
+  .reviews__user-card--left .reviews__photo-holder {
+    width: 180px;
+    height: 180px;
+  }
+
+  .reviews__user-card--right .reviews__photo-holder {
+    width: 180px;
+    height: 180px;
+  }
+
+  .reviews__user-card--center .reviews__photo-holder {
+    width: 250px;
+    height: 250px;
   }
 
   .reviews__user-card--left {
@@ -803,14 +804,23 @@ body {
 }
 
 @media (min-width: 1200px) {
-  :root {
-    --avatar-left-size: 285px;
-    --avatar-center-size: 394px;
-    --avatar-right-size: 288px;
+  .reviews__photos-container {
+    height: 520px;
   }
 
-  .reviews__photos-container {
-    height: 480px;
+  .reviews__user-card--left .reviews__photo-holder {
+    width: 285px;
+    height: 285px;
+  }
+
+  .reviews__user-card--right .reviews__photo-holder {
+    width: 288px;
+    height: 288px;
+  }
+
+  .reviews__user-card--center .reviews__photo-holder {
+    width: 394px;
+    height: 394px;
   }
 
   .reviews__user-card--left {
@@ -825,6 +835,10 @@ body {
 
   .reviews__user-card--center {
     top: 60px;
+  }
+
+  .reviews__content {
+    margin-top: 40px;
   }
 
   .reviews__decor--circle-1 {
@@ -845,3 +859,4 @@ body {
     right: 4%;
   }
 }
+/*Іван*/
