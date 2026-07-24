@@ -17,7 +17,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 /* Эля */
@@ -30,7 +30,6 @@
   display: flex;
   align-items: center;
   gap: 55px;
-  margin-left: 0;
 }
 
 .header__logo {
@@ -43,8 +42,18 @@
   gap: 20px;
 }
 
+.header__item a:hover {
+  padding: 4px 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 110, 103, 0.63) 0%,
+    rgba(253, 86, 143, 0.86) 100%
+  );
+  color: var(--white-text);
+}
+
 .header__link {
-  width: 74px;
+  width: 81px;
   height: 22px;
   font-family: var(--font-text);
   color: var(--text);
@@ -54,9 +63,6 @@
 }
 
 /* hero */
-.hero .container {
-  margin-left: 0;
-}
 
 .hero__title {
   color: var(--text);
@@ -97,4 +103,331 @@
   border: none;
 }
 
+/* about-us */
+.about-us .container {
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-us__content {
+  display: flex;
+  flex-direction: column;
+}
+.about-us__title {
+  color: var(--text);
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 28px;
+}
+
+.about-us__text {
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
 /* Эля */
+
+
+.price {
+  position: relative;
+  padding: 60px 0;
+  background-color: #fdf3f0;
+  overflow: hidden;
+}
+
+.price::before,
+.price::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 20px solid rgba(0, 0, 0, 0.04);
+}
+
+.price::before {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  right: 10%;
+}
+
+.price::after {
+  width: 90px;
+  height: 90px;
+  bottom: 60px;
+  left: 5%;
+}
+
+.price__title {
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2b1c17;
+  margin-bottom: 40px;
+}
+
+.price__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.price-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  border-color: #f6a89a;
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(224, 122, 95, 0.15);
+  z-index: 2;
+}
+
+.price-card__title {
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b1c17;
+  margin-bottom: 24px;
+}
+
+.price-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4a3d38;
+}
+
+.price-card__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f6a89a;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-card__btn {
+  margin-top: auto;
+  align-self: center;
+  width: 100%;
+  max-width: 220px;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  background-color: #f6a89a;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price-card__btn:hover {
+  background-color: #f18e7c;
+}
+
+.registration {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.registration::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 8%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 20px solid rgba(243, 132, 140, 0.15);
+}
+
+.registration__title {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+
+.registration-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
+}
+
+.registration-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.registration-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.registration-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+
+.registration-card__content {
+  position: relative;
+  z-index: 2;
+  color: var(--white-text);
+}
+
+.registration-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.registration-card__date,
+.registration-card__location,
+.registration-card__subtitle {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.registration-card__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registration-card__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--white-text);
+  font-family: var(--font-text);
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.registration-card__input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.registration-card__input:focus {
+  outline: none;
+  border-color: var(--white-text);
+}
+
+.registration-card__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.registration-card__btn {
+  width: 85%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  background: #f3848c;
+  color: var(--white-text);
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 10px 15px 25px rgba(232, 183, 183, 0.35);
+  transition: background-color 0.3s ease;
+}
+
+.registration-card__btn:hover {
+  background: #f18e7c;
+}
+
+
+
+
+.registration-card--mobile {
+  display: block;
+  padding: 40px 24px;
+}
+
+.registration-card--mobile .registration-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.registration-card--mobile .registration-card__fields {
+  width: 100%;
+  text-align: left;
+}
+
+
+
+
+@media (min-width:768px){
+
+  .price__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .price-card {
+    flex: 1;
+  }
+
+
+}
