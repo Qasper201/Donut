@@ -3,7 +3,7 @@
   --text: #3c322d;
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
-   --color-bg: #fcfcfc;
+  --color-bg: #fcfcfc;
   --color-primary: #ff8a9e;
   --color-primary-hover: #ff7188;
   --color-text-main: #4a4a4a;
@@ -16,7 +16,7 @@
   --color-primary: #ff8a9e;
   --color-primary-hover: #ff7188;
 
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
 
   --avatar-left-size: 100px;
   --avatar-center-size: 130px;
@@ -81,6 +81,15 @@
 }
 
 /* hero */
+.hero {
+  padding-bottom: 90px;
+}
+.hero__wrapper {
+  background-image: url("/imgs/hero__bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .hero__title {
   color: var(--text);
@@ -120,6 +129,20 @@
   box-shadow: 10px 15px 25px 0 rgba(232, 183, 183, 0.45);
   border: none;
 }
+
+.hero__btn:hover {
+  border-radius: 25px;
+  border: 1px solid #f3848c;
+  background: var(--white-text);
+  color: #f3848c;
+}
+
+.hero__btn:active {
+  background: #f3848c;
+  color: var(--white-text);
+  border: 1px solid transparent;
+}
+
 .hero__list {
   display: flex;
   gap: 16px;
@@ -129,8 +152,9 @@
 .hero__icon {
   fill: var(--text);
 }
-.hero__icon:hover, .hero__icon:focus {
-  fill: #F3848C;
+.hero__icon:hover,
+.hero__icon:focus {
+  fill: #f3848c;
 }
 
 /* about-us */
@@ -166,9 +190,6 @@
 /* Эля */
 
 /* Саня */
-
-
-
 
 .price {
   position: relative;
@@ -225,7 +246,10 @@
   display: flex;
   flex-direction: column;
   border: 2px solid transparent;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .price-card:hover {
@@ -353,8 +377,6 @@
   z-index: 1;
 }
 
-
-
 .registration-card__content {
   position: relative;
   z-index: 2;
@@ -426,9 +448,6 @@
   background: #f18e7c;
 }
 
-
-
-
 .registration-card--mobile {
   display: block;
   padding: 40px 24px;
@@ -447,12 +466,9 @@
   text-align: left;
 }
 
-
-
 /* ---------- DESKTOP CARD ---------- */
 
-@media (min-width:768px) {
-
+@media (min-width: 768px) {
   .price__list {
     flex-direction: row;
     align-items: stretch;
@@ -467,7 +483,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fcfcfc;
   color: #4a4a4a;
 }
@@ -708,7 +724,9 @@ body {
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(255, 138, 158, 0.4);
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
   margin-top: 10px;
   width: 100%;
   max-width: 200px;
@@ -744,14 +762,13 @@ body {
 .contact__social-icon {
   width: 24px;
   height: 24px;
-fill: var(--icon-color);;
+  fill: var(--icon-color);
   transition: fill 0.3s ease;
 }
 
 .contact__social-link:hover .contact__social-icon {
   fill: var(--color-primary-hover);
 }
-
 
 @media (min-width: 768px) {
   .reviews {
