@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
     />
-    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
   </head>
@@ -30,12 +30,24 @@
         </a>
         <nav class="header__menu">
           <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">About Us</a></li>
-            <li class="header__item"><a class="header__link" href="#">Program</a></li>
-            <li class="header__item"><a class="header__link" href="#">Speakers</a></li>
-            <li class="header__item"><a class="header__link" href="#">Price</a></li>
-            <li class="header__item"><a class="header__link" href="#">Reviews</a></li>
-            <li class="header__item"><a class="header__link" href="#">Contacts</a></li>
+            <li class="header__item">
+              <a class="header__link" href="#">About Us</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Program</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Speakers</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Price</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Reviews</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -80,7 +92,109 @@
 
       <!--Саня-->
       <section class="price">
-        <div class="container"></div>
+        <div class="container">
+          <h2 class="price__title">Price</h2>
+
+          <div class="price__list">
+            <!-- Card 1 -->
+            <div class="price-card">
+              <h3 class="price-card__title">Easy start</h3>
+              <ul class="price-card__features">
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  features of yeast dough preparation
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  fry and glaze donuts
+                </li>
+              </ul>
+
+              <button class="price-card__btn">Register</button>
+            </div>
+
+            <!-- Card 2 - featured -->
+            <div class="price-card price-card--featured">
+              <h3 class="price-card__title">I want delicious donuts</h3>
+              <ul class="price-card__features">
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  features of yeast dough preparation
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  melt chocolate for decoration
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  fry and glaze donuts
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  donut decoration, painting and various techniques
+                </li>
+              </ul>
+
+              <button class="price-card__btn">Register</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="price-card">
+              <h3 class="price-card__title">Premium</h3>
+              <ul class="price-card__features">
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  features of yeast dough preparation
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of liquid caramel for stuffing
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  preparation of raspberry and strawberry filling
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  melt chocolate for decoration
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  fry and glaze donuts
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  donut decoration, painting and various techniques
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  After party and donut tasting with speakers
+                </li>
+                <li class="price-card__feature">
+                  <span class="price-card__icon"></span>
+                  2 private lessons with one of the speakers
+                </li>
+              </ul>
+              <button class="price-card__btn">Register</button>
+            </div>
+          </div>
+        </div>
       </section>
       <!--Саня-->
 
@@ -92,7 +206,56 @@
 
       <!--Саня-->
       <section class="registration">
-        <div class="container"></div>
+        <div class="container">
+          <h2 class="registration__title">Registration</h2>
+
+          <!-- MOBILE VERSION -->
+          <div class="registration-card registration-card--mobile">
+            <img
+              class="registration-card__img"
+              src="./imgs/donut-registrion.png"
+              alt="donuts"
+            />
+            <div class="registration-card__overlay"></div>
+
+            <div class="registration-card__content">
+              <div class="registration-card__text">
+                <span class="registration-card__date">May 23, 11:00</span>
+                <span class="registration-card__location">New York</span>
+              </div>
+
+              <div class="registration-card__divider"></div>
+
+              <h3 class="registration-card__subtitle">
+                Apply your personal info for registration
+              </h3>
+
+              <form class="registration-card__fields">
+                <input
+                  class="registration-card__input"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                />
+                <input
+                  class="registration-card__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number"
+                />
+                <input
+                  class="registration-card__input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </form>
+
+              <button class="registration-card__btn" type="submit">
+                Register
+              </button>
+            </div>
+          </div>
       </section>
       <!--Саня-->
 
