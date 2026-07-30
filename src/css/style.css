@@ -41,18 +41,29 @@
 /* Эля */
 /* header */
 .header {
-  padding-top: 36px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 16px;
 }
 
 .header .container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 55px;
 }
 
 .header__logo {
   width: 158px;
   height: 70px;
+}
+
+.header__menu {
+  display: none;
+}
+
+.burger__btn {
+  display: block;
 }
 
 .header__list {
@@ -81,14 +92,13 @@
 }
 
 /* hero */
-.hero {
-  padding-bottom: 90px;
-}
-.hero__wrapper {
-  background-image: url("/imgs/hero_bg.jpg");
+.hero { 
+   background-image: url("../imgs/hero_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-bottom: 90px;
+  padding-top: 65px;
 }
 
 .hero__title {
@@ -189,7 +199,153 @@
 }
 /* Эля */
 
-/* Саня */
+/* Вова */
+
+.program {
+  background-image: url(/imgs/bacgroundPR.png);
+  padding: 80px 0;
+}
+
+.program__title, .program_text,.program__text, .program__description {
+
+  font-family: var(--font-title);
+  color: var(--text);
+
+}
+
+
+
+
+.program__title { 
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.program_text {
+   margin: 0;
+  font-size: 17px;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.program__list {
+  margin: 20px 0;
+}
+
+
+
+.program__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.program .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.program__content {
+  width: 420px;
+  flex-shrink: 0;
+}
+
+.program__title {
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.program__description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.program__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.card__image {
+    border: 3px solid orange;
+    border-radius: 90%;
+    overflow: hidden; 
+}
+
+.card__img {
+    width: 100%;
+    display: block;
+}
+
+
+/* SPEAKERS */
+
+.speakers__title {
+  text-align: center;
+  font-size: 42px;
+  color: var(--text);
+}
+
+.speakers__list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.speakers__name, .speakers__text {
+  font-family: var(--font-text);
+  color: var(--text);
+  text-align: center;
+}
+
+.speakers__image--bg {
+  position: relative;
+  background-color:#F3848C;
+  width: 288px;
+  height: 288px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.speakers__image {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.speakers__item {
+  position: relative;
+}
+
+.speakers__person {
+  position: absolute;
+  object-fit: contain;
+  left: 50%;
+  top: -22px;
+  transform: translate(-50.9%);
+}
+
+.speakers__item:nth-child(4) .speakers__person {
+  transform: translate(-50.9%, 5px);
+}
+
+.speakers__text, .speakers__name {
+  margin-top: 20px;
+}
+
+
+
+/* Вова */
 
 .price {
   position: relative;
@@ -475,6 +631,18 @@
 
 
 @media (min-width: 768px) {
+
+.header {
+  top: 24px;
+}
+
+.header .container {
+  align-items: center;
+}
+
+
+
+
   .price__list {
     flex-direction: row;
     align-items: stretch;
@@ -950,8 +1118,28 @@ body {
     width: auto;
   }
 }
+@media (min-width: 992px){
 
-@media (min-width: 1200px) {
+.header .container {
+justify-content: flex-start;
+}
+
+
+.burger__btn {
+    display: none;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+}
+
+@media (min-width: 1200px){
+
+  
+
+
   .reviews__photos-container {
     height: 520px;
   }
