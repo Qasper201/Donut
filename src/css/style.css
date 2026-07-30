@@ -511,7 +511,7 @@
   overflow: hidden;
   min-height: 394px;
   box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/donut-registrion.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../imgs/donut-registrion.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -654,9 +654,9 @@
 
 
   .registration-card{
-    background-image: url("../img/donut-registration-right.png"),
-    url("../img/ogrizok.png"), 
-    url("../img/donut-registrion.png");
+    background-image: url("../imgs/donut-registrion-left.png"),
+    url("../imgs/ogrizok.png"), 
+    url("../imgs/donut-registrion.png");
     background-position: left bottom, left, right top;
     background-size: 20% 38%, 80% 100%, 65% 100%;
     border-radius: 2px;
@@ -735,9 +735,9 @@
 
 @media (min-width: 1200px) {
   .registration-card{
-    background-image: url("../img/donut-registration-right.png"),
-    url("../img/ogrizok.png"), 
-    url("../img/donut-registrion.png");
+    background-image: url("../imgs/donut-registrion-left.png"),
+    url("../imgs/ogrizok.png"), 
+    url("../imgs/donut-registrion.png");
     background-position: left bottom, left, right top;
     background-size: 20% 38%, 94% 100%, 44% 100%;
     border-radius: 2px;
