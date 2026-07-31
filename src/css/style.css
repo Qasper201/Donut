@@ -202,7 +202,9 @@
 /* Вова */
 
 .program {
-  background-image: url(/imgs/bacgroundPR.png);
+  background-image: url(../imgs/bacgroundPR.png);
+  background-position: right;
+  background-repeat: no-repeat;
   padding: 80px 0;
 }
 
@@ -276,23 +278,100 @@
 }
 
 
+.program .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ---------- Картки ---------- */
+
+.cards__list {
+    width: 560px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 55px;
+
+    margin-top: 40px;
+}
+
+
+
+
+.card {
+    position: relative;
+    width: 265px;
+    height: 265px;
+}
+
 .card__image {
-    border: 3px solid orange;
-    border-radius: 90%;
-    overflow: hidden; 
+    width: 265px;
+    height: 265px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .card__img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
+
+.card__text {
+    position: absolute;
+    left: 48%;
+    bottom: 45px;          /* не 22px */
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+
+    text-shadow: 0 3px 10px rgba(0,0,0,.55);
+}
+
+.card__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.card__p {
+    font-size: 14px;
+}
+
+
+.card:nth-child(1) {
+    transform: translate(-20px, -40px);
+}
+
+.card:nth-child(2) {
+    transform: translate(45px, 10px);
+}
+
+.card:nth-child(3) {
+    transform: translate(-5px, -30px);
+}
+
+.card:nth-child(4) {
+    transform: translate(35px, 25px);
+}
+
+
 
 
 /* SPEAKERS */
 
+.speakers {
+  margin-bottom: 100px;
+}
+
 .speakers__title {
   text-align: center;
   font-size: 42px;
+  
   color: var(--text);
 }
 
