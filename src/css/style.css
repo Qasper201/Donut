@@ -4,7 +4,7 @@
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
   --color-bg: #fcfcfc;
-  --color-primary: #ff8a9e;
+  --color-primary: #F3848C;
   --color-primary-hover: #ff7188;
   --color-text-main: #4a4a4a;
   --color-text-dark: #333333;
@@ -13,7 +13,7 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
-  --color-primary: #ff8a9e;
+  --color-primary: #F3848C;
   --color-primary-hover: #ff7188;
 
   --font-family: "Poppins", sans-serif;
@@ -40,22 +40,23 @@
 
 /* Эля */
 /* header */
+
 .header {
   position: absolute;
-  width: 100%;
-  left: 0;
   top: 16px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  gap: 55px;
+  align-items: center;
 }
 
 .header__logo {
-  width: 158px;
-  height: 70px;
+  width: 96px;
 }
 
 .header__menu {
@@ -63,12 +64,20 @@
 }
 
 .burger__btn {
-  display: block;
+  display: block;;
 }
 
 .header__list {
   display: flex;
   gap: 20px;
+  list-style: none;
+}
+
+.header__link {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-text);
+  font-size: 18px;
 }
 
 .header__item a:hover {
@@ -81,47 +90,41 @@
   color: var(--white-text);
 }
 
-.header__link {
-  width: 81px;
-  height: 22px;
-  font-family: var(--font-text);
-  color: var(--text);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-}
+/* HERO */
 
-/* hero */
-.hero { 
-   background-image: url("../imgs/hero_bg.jpg");
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.hero {
+  background-image: url("../imgs/hero_bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  padding-bottom: 90px;
-  padding-top: 65px;
+  background-position: right top;
+  padding-top: 86px;
+  padding-bottom: 8px;
 }
 
 .hero__title {
   color: var(--text);
-  font-family: var(--font-title);
-  font-size: 60px;
+  font-family: "Montserrat Alternates";
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 65px;
-  width: 757px;
-  height: 130px;
-  margin-bottom: 20px;
-  margin-top: 65px;
+  line-height: normal;
+  letter-spacing: -0.84px;
+  padding-bottom: 18px;
 }
 
 .hero__text {
-  color: var(--text);
   font-family: var(--font-title);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-bottom: 28px;
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
 .hero__btn {
@@ -133,7 +136,7 @@
   font-weight: 400;
   line-height: normal;
   border-radius: 25px;
-  background: #f3848c;
+  background: var(--color-primary);
   width: 145px;
   height: 40px;
   box-shadow: 10px 15px 25px 0 rgba(232, 183, 183, 0.45);
@@ -141,14 +144,13 @@
 }
 
 .hero__btn:hover {
-  border-radius: 25px;
-  border: 1px solid #f3848c;
   background: var(--white-text);
-  color: #f3848c;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .hero__btn:active {
-  background: #f3848c;
+  background: var(--color-primary);
   color: var(--white-text);
   border: 1px solid transparent;
 }
@@ -156,29 +158,46 @@
 .hero__list {
   display: flex;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 28px;
+  list-style: none;
 }
 
 .hero__icon {
   fill: var(--text);
 }
-.hero__icon:hover,
-.hero__icon:focus {
-  fill: #f3848c;
+
+.hero__icon:hover {
+  fill: var(--color-primary);
 }
 
-/* about-us */
 .about-us .container {
-  padding-top: 64px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.about-us__content {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  padding-top: 40px;
 }
+
+.about-us__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-us__more {
+  display: none;
+}
+
+.about-us__link {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* ABOUT US */
 .about-us__title {
   color: var(--text);
   font-family: var(--font-title);
@@ -206,23 +225,21 @@
   padding: 80px 0;
 }
 
-.program__title, .program_text,.program__text, .program__description {
-
+.program__title,
+.program_text,
+.program__text,
+.program__description {
   font-family: var(--font-title);
   color: var(--text);
-
 }
 
-
-
-
-.program__title { 
+.program__title {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
 .program_text {
-   margin: 0;
+  margin: 0;
   font-size: 17px;
   line-height: 1.25;
   color: var(--text);
@@ -232,8 +249,6 @@
   margin: 20px 0;
 }
 
-
-
 .program__item {
   display: flex;
   align-items: center;
@@ -242,13 +257,14 @@
 
 .program .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 80px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 40px;
 }
 
 .program__content {
-  width: 420px;
+  width: 100%;
   flex-shrink: 0;
 }
 
@@ -275,18 +291,11 @@
   list-style: none;
 }
 
-
 .card__image {
-    border: 3px solid orange;
-    border-radius: 90%;
-    overflow: hidden; 
+  border: 3px solid var(--color-primary);
+  border-radius: 24px;
+  overflow: hidden;
 }
-
-.card__img {
-    width: 100%;
-    display: block;
-}
-
 
 /* SPEAKERS */
 
@@ -302,7 +311,8 @@
   justify-content: center;
 }
 
-.speakers__name, .speakers__text {
+.speakers__name,
+.speakers__text {
   font-family: var(--font-text);
   color: var(--text);
   text-align: center;
@@ -310,7 +320,7 @@
 
 .speakers__image--bg {
   position: relative;
-  background-color:#F3848C;
+  background-color: var(--color-primary);
   width: 288px;
   height: 288px;
   overflow: hidden;
@@ -320,7 +330,6 @@
 .speakers__image {
   display: block;
   margin: 0 auto;
-  
 }
 
 .speakers__item {
@@ -339,11 +348,10 @@
   transform: translate(-50.9%, 5px);
 }
 
-.speakers__text, .speakers__name {
+.speakers__text,
+.speakers__name {
   margin-top: 20px;
 }
-
-
 
 /* Вова */
 
@@ -481,7 +489,6 @@
   position: relative;
   padding: 60px 0;
   overflow: hidden;
-  
 }
 
 .registration::after {
@@ -511,7 +518,9 @@
   overflow: hidden;
   min-height: 394px;
   box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../imgs/donut-registrion.png");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../imgs/donut-registrion.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -627,21 +636,71 @@
   text-align: left;
 }
 
-
-
-
 @media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-.header {
-  top: 24px;
-}
+  .hero .container {
+    align-items: flex-start;
+    text-align: left;
+  }
 
-.header .container {
-  align-items: center;
-}
+  .header {
+    top: 24px;
+  }
 
+  .header__logo {
+    width: 158px;
+  }
 
+  .header .container {
+    gap: 55px;
+  }
 
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+  .hero__title {
+    color: var(--text);
+    font-family: var(--font-title);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    width: 757px;
+    height: 130px;
+    margin-bottom: 20px;
+    margin-top: 65px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .about-us .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 31px;
+    padding-top: 36px;
+  }
+  .about-us__image {
+    width: 336px;
+    height: 359px;
+  }
+
+  .about-us__title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .about-us__text {
+    font-size: 18px;
+  }
 
   .price__list {
     flex-direction: row;
@@ -652,16 +711,19 @@
     flex: 1;
   }
 
-
-  .registration-card{
-    background-image: url("../imgs/donut-registrion-left.png"),
-    url("../imgs/ogrizok.png"), 
-    url("../imgs/donut-registrion.png");
-    background-position: left bottom, left, right top;
-    background-size: 20% 38%, 80% 100%, 65% 100%;
+  .registration-card {
+    background-image:
+      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
+      url("../imgs/donut-registrion.png");
+    background-position:
+      left bottom,
+      left,
+      right top;
+    background-size:
+      20% 38%,
+      80% 100%,
+      65% 100%;
     border-radius: 2px;
-   
-    
   }
 
   .registration-card .registration-card__content {
@@ -672,17 +734,15 @@
     gap: 32px;
     padding: 50px;
     text-align: left;
-    color: var(--text)
+    color: var(--text);
   }
 
-  
   .registration-card .registration-card__left {
     flex: 1;
     display: flex;
     justify-content: center;
   }
 
-  
   .registration-card .registration-card__divider {
     position: absolute;
     margin-left: 22%;
@@ -690,16 +750,14 @@
     width: 1px;
     height: 200px;
     background: var(--color-text-dark);
-    
   }
-
 
   .registration-card .registration-card__right {
     flex: 1.5;
     display: flex;
-    flex-direction: column;    
-    gap: 20px;                 
-    align-items: flex-start;   
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
   }
 
   /* Поля форми всередині правої колонки */
@@ -709,10 +767,9 @@
     max-width: 234px;
     gap: 20px;
     width: 100%;
-    
   }
 
-  .registration-card__subtitle{
+  .registration-card__subtitle {
     max-width: 234px;
   }
 
@@ -721,29 +778,30 @@
   }
 
   .registration-card__input::placeholder {
-  color: var(--text);
+    color: var(--text);
   }
 
-
-
-  
   .registration-card .registration-card__btn {
-    width: 200px;              
+    width: 200px;
     margin-top: 10px;
   }
 }
 
 @media (min-width: 1200px) {
-  .registration-card{
-    background-image: url("../imgs/donut-registrion-left.png"),
-    url("../imgs/ogrizok.png"), 
-    url("../imgs/donut-registrion.png");
-    background-position: left bottom, left, right top;
-    background-size: 20% 38%, 94% 100%, 44% 100%;
+  .registration-card {
+    background-image:
+      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
+      url("../imgs/donut-registrion.png");
+    background-position:
+      left bottom,
+      left,
+      right top;
+    background-size:
+      20% 38%,
+      94% 100%,
+      44% 100%;
     border-radius: 2px;
-  } 
-
-
+  }
 }
 /*Саня*/
 /* Іван */
@@ -1118,14 +1176,17 @@ body {
     width: auto;
   }
 }
-@media (min-width: 992px){
+@media (min-width: 992px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-.header .container {
-justify-content: flex-start;
-}
+  .header .container {
+    justify-content: flex-start;
+  }
 
-
-.burger__btn {
+  .burger__btn {
     display: none;
   }
 
@@ -1133,13 +1194,21 @@ justify-content: flex-start;
     display: block;
   }
 
+  .about-us__image {
+    width: 608px;
+    height: 381px;
+  }
+
+  .about-us__more {
+    display: block;
+  }
+
+  .about-us__link {
+    display: none;
+  }
 }
 
-@media (min-width: 1200px){
-
-  
-
-
+@media (min-width: 1200px) {
   .reviews__photos-container {
     height: 520px;
   }
