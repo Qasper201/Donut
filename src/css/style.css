@@ -4,7 +4,7 @@
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
   --color-bg: #fcfcfc;
-  --color-primary: #F3848C;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
   --color-text-main: #4a4a4a;
   --color-text-dark: #333333;
@@ -13,7 +13,7 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
-  --color-primary: #F3848C;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
 
   --font-family: "Poppins", sans-serif;
@@ -60,11 +60,67 @@
 }
 
 .header__menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  padding: 48px 40px;
+  background-color: var(--color-bg);
+  transform: translateX(100%);
+  transition: transform 250ms ease;
 }
 
-.burger__btn {
-  display: block;;
+.header__menu.is-open {
+  transform: translateX(0);
+}
+
+.header__menu-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__menu-icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+}
+
+.header__menu-icon::before,
+.header__menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+}
+
+.header__menu-icon::before {
+  top: -8px;
+}
+
+.header__menu-icon::after {
+  top: 8px;
+}
+
+.header__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  color: var(--text);
 }
 
 .header__list {
@@ -1186,12 +1242,30 @@ body {
     justify-content: flex-start;
   }
 
-  .burger__btn {
+  .header__menu-btn {
     display: none;
   }
 
   .header__menu {
+    position: static;
+    transform: none;
+    background: transparent;
+    padding: 0;
     display: block;
+  }
+
+  .header__close-btn {
+    display: none;
+  }
+
+  .header__nav {
+    height: auto;
+  }
+
+  .header__list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 
   .about-us__image {
