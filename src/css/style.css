@@ -261,6 +261,10 @@
   color: var(--text);
 }
 
+.program_block {
+  display: none;
+}
+
 .program__description {
   margin: 0;
   font-size: 18px;
