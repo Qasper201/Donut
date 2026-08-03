@@ -62,7 +62,19 @@
           </ul>
         </nav>
 
-        <button class="burger__btn">Burger</button>
+        <button
+      class="header__menu-btn js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="header__menu-icon"></span>
+    </button>
+
+    <div class="header__menu js-menu-container" id="mobile-menu">
+      <button class="header__close-btn js-close-menu">
+        ✕
+      </button>
+
       </div>
     </header>
 
@@ -96,7 +108,6 @@
           </ul>
         </div>
       </section>
-
       <section class="about-us">
         <div class="container">
           <img
@@ -120,11 +131,12 @@
               multiple awards & recognition for excellence.
 
               <br /><br />
-
+             <span class="about-us__more">
               We are going to teach you how to cook with passion and sparkles in
               your eyes! We love what we do and believe you will enjoy our
-              cooking atmosphere!
+              cooking atmosphere!</span>
             </p>
+             <a href="#" class="about-us__link">Read more</a>
           </div>
         </div>
       </section>
@@ -621,53 +633,58 @@
         <div class="container">
           <h2 class="registration__title">Registration</h2>
 
-          <div class="registration-card registration-card--mobile">
-            <img
+          <div class="registration-card">
+            <!--<img
               class="registration-card__img"
-              src="./src/imgs/donut-registrion.png"
+              src="./src/img/donut-registrion.png"
               alt="donuts"
-            />
-
-            <div class="registration-card__overlay"></div>
+            />-->
+            
 
             <div class="registration-card__content">
-              <p class="registration-card__text">
-                May 23, 11:00
-                <br />
-                New York
-              </p>
+             
+              <div class="registration-card__left">
+                <div class="registration-card__text">
+                  <span class="registration-card__date">May 23, 11:00</span>
+                  <span class="registration-card__location">New York</span>
+                </div>
+              </div>
 
+              
               <div class="registration-card__divider"></div>
 
-              <h3 class="registration-card__subtitle">
-                Apply your personal info for registration
-              </h3>
+              
+              <div class="registration-card__right">
+                <h3 class="registration-card__subtitle">
+                  Apply your personal info for registration
+                </h3>
 
-              <form class="registration-card__fields">
-                <input
-                  class="registration-card__input"
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                />
-
-                <input
-                  class="registration-card__input"
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                />
-
-                <input
-                  class="registration-card__input"
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                />
-              </form>
-
-              <button class="registration-card__btn">Register</button>
+                
+                <form class="registration-card__fields">
+                  <input
+                    class="registration-card__input"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                  />
+                  <input
+                    class="registration-card__input"
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                  />
+                  <input
+                    class="registration-card__input"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+                </form>
+                
+              </div>
+              <button class="registration-card__btn" type="submit">Register</button>
             </div>
+            
           </div>
         </div>
       </section>
@@ -692,7 +709,6 @@
               required
             />
           </div>
-
           <div class="contact__field">
             <input
               type="text"
