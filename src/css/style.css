@@ -4,7 +4,7 @@
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
   --color-bg: #fcfcfc;
-  --color-primary: #F3848C;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
   --color-text-main: #4a4a4a;
   --color-text-dark: #333333;
@@ -13,7 +13,7 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
-  --color-primary: #F3848C;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
 
   --font-family: "Poppins", sans-serif;
@@ -64,7 +64,7 @@
 }
 
 .burger__btn {
-  display: block;;
+  display: block;
 }
 
 .header__list {
@@ -636,6 +636,35 @@
   text-align: left;
 }
 
+/* footer */
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.footer__item {
+  color: #2e2520;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__image {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  bottom: -17px;
+}
+
+/* footer */
+
 @media (min-width: 768px) {
   .container {
     padding-left: 32px;
@@ -784,6 +813,16 @@
   .registration-card .registration-card__btn {
     width: 200px;
     margin-top: 10px;
+  }
+
+  .footer__icon,
+  .footer__image {
+    display: none;
+  }
+
+  .footer__list {
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 }
 
@@ -999,16 +1038,23 @@ body {
 }
 
 .contact__title {
-  font-size: 26px;
+  color: #2e2520;
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-style: normal;
   font-weight: 500;
-  margin-bottom: 8px;
-  color: #333333;
+  line-height: normal;
+  margin-bottom: 27px;
 }
 
 .contact__subtitle {
-  font-size: 13px;
-  color: #888888;
-  margin-bottom: 30px;
+  color: #2e2520;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .contact__form {
@@ -1027,12 +1073,14 @@ body {
 .contact__input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #cccccc;
-  background: transparent;
-  padding: 8px 0;
-  font-size: 14px;
-  outline: none;
-  color: #333333;
+  border-bottom: 1px solid #3c322d;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 0;
   transition: border-color 0.3s;
 }
 
@@ -1042,19 +1090,23 @@ body {
 
 .contact__button {
   background: #ff8a9e;
-  color: #ffffff;
   border: none;
-  padding: 10px 40px;
-  font-size: 14px;
+  padding: 9px 40px;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(255, 138, 158, 0.4);
   transition:
     background 0.3s,
     transform 0.2s;
-  margin-top: 10px;
-  width: 100%;
-  max-width: 200px;
+  margin-top: 40px;
+  margin-bottom: 46px;
 }
 
 .contact__button:hover {
@@ -1168,8 +1220,8 @@ body {
   }
 
   .contact__subtitle {
-    font-size: 14px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 16px;
   }
 
   .contact__button {
