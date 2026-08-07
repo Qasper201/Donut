@@ -56,7 +56,7 @@
 }
 
 .header__logo {
-  width: 96px;
+  width: 108px;
 }
 
 .header__menu {
@@ -172,52 +172,107 @@
 
 /* burger */
 
-  .header__menu-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  .header__close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 32px;
-    color: var(--text);
-  }
-
-  .header__menu-icon {
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--text);
+.header__menu-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
-    .header__menu-icon::before,
-    .header__menu-icon::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 24px;
-      height: 2px;
-      background-color: var(--text);
-    }
 
-    .header__menu-icon::before {
-      top: -8px;
-    }
+.header__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  color: var(--text);
+}
 
-    .header__menu-icon::after {
-      top: 8px;
-    }
+.header__menu-icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+}
+.header__menu-icon::before,
+.header__menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+}
 
+.header__menu-icon::before {
+  top: -8px;
+}
+
+.header__menu-icon::after {
+  top: 8px;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+   width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #e5e2e3;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .header__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #000000;
+}
+
+.header__logo {
+  margin-bottom: 46px;
+}
+
+.mobile__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile__link {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-text);
+  font-size: 28px;
+}
+
+.mobile__item a:hover {
+  padding: 4px 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 110, 103, 0.63) 0%,
+    rgba(253, 86, 143, 0.86) 100%
+  );
+  color: var(--white-text);
+}
 
 .about-us .container {
   display: flex;
@@ -276,23 +331,21 @@
   padding: 80px 0;
 }
 
-.program__title, .program_text,.program__text, .program__description {
-
+.program__title,
+.program_text,
+.program__text,
+.program__description {
   font-family: var(--font-title);
   color: var(--text);
-
 }
 
-
-
-
-.program__title { 
+.program__title {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
 .program_text {
-   margin: 0;
+  margin: 0;
   font-size: 17px;
   line-height: 1.25;
   color: var(--text);
@@ -301,8 +354,6 @@
 .program__list {
   margin: 20px 0;
 }
-
-
 
 .program__item {
   display: flex;
@@ -349,90 +400,82 @@
   list-style: none;
 }
 
-
 .program .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* ---------- Картки ---------- */
 
 .cards__list {
-    width: 560px;
+  width: 560px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 55px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 55px;
 
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
-
-
-
 .card {
-    position: relative;
-    width: 265px;
-    height: 265px;
+  position: relative;
+  width: 265px;
+  height: 265px;
 }
 
 .card__image {
-    width: 265px;
-    height: 265px;
-    border-radius: 50%;
-    overflow: hidden;
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__text {
-    position: absolute;
-    left: 48%;
-    bottom: 45px;    
-    transform: translateX(-50%);
-    width: 85%;
-    text-align: center;
-    color: #fff;
-    z-index: 2;
+  position: absolute;
+  left: 48%;
+  bottom: 45px;
+  transform: translateX(-50%);
+  width: 85%;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
 
-    text-shadow: 0 3px 10px rgba(0,0,0,.55);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
 }
 
 .card__title {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 1.2;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .card__p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
-
 .card:nth-child(1) {
-    transform: translate(-20px, -40px);
+  transform: translate(-20px, -40px);
 }
 
 .card:nth-child(2) {
-    transform: translate(45px, 10px);
+  transform: translate(45px, 10px);
 }
 
 .card:nth-child(3) {
-    transform: translate(-5px, -30px);
+  transform: translate(-5px, -30px);
 }
 
 .card:nth-child(4) {
-    transform: translate(35px, 25px);
+  transform: translate(35px, 25px);
 }
-
-
-
 
 /* SPEAKERS */
 
@@ -443,7 +486,7 @@
 .speakers__title {
   text-align: center;
   font-size: 42px;
-  
+
   color: var(--text);
 }
 
@@ -453,7 +496,8 @@
   justify-content: center;
 }
 
-.speakers__name, .speakers__text {
+.speakers__name,
+.speakers__text {
   font-family: var(--font-text);
   color: var(--text);
   text-align: center;
@@ -461,7 +505,7 @@
 
 .speakers__image--bg {
   position: relative;
-  background-color:#F3848C;
+  background-color: #f3848c;
   width: 288px;
   height: 288px;
   overflow: hidden;
@@ -471,7 +515,6 @@
 .speakers__image {
   display: block;
   margin: 0 auto;
-  
 }
 
 .speakers__item {
@@ -490,7 +533,8 @@
   transform: translate(-50.9%, 5px);
 }
 
-.speakers__text, .speakers__name {
+.speakers__text,
+.speakers__name {
   margin-top: 20px;
 }
 
@@ -806,9 +850,6 @@
 
 /* footer */
 
-
-
-
 /*Саня*/
 /* Іван */
 body {
@@ -1114,9 +1155,7 @@ body {
   fill: var(--color-primary-hover);
 }
 
-
 @media (max-width: 768px) {
-  
   .program__title {
     text-align: center !important;
   }
@@ -1129,172 +1168,161 @@ body {
     display: none;
   }
 
-  .cards__list{
-    width:100%;
-    margin-top:30px;
+  .cards__list {
+    width: 100%;
+    margin-top: 30px;
 
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:20px 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
 
-    justify-items:center;
-}
+    justify-items: center;
+  }
 
-.program .container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
+  .program .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.program__content{
-    width:100%;
-}
+  .program__content {
+    width: 100%;
+  }
 
-.cards__list{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    justify-items:center;
-    gap:20px;
-}
+  .cards__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
 
-.card{
-    width:185px;
-    height:185px;
-}
+  .card {
+    width: 185px;
+    height: 185px;
+  }
 
-.card__image{
-    width:185px;
-    height:185px;
-}
+  .card__image {
+    width: 185px;
+    height: 185px;
+  }
 
-.card__img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+  .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.card__text{
-    width:100%;
-    left:50%;
-    bottom:48px;
-    transform:translateX(-50%);
-}
+  .card__text {
+    width: 100%;
+    left: 50%;
+    bottom: 48px;
+    transform: translateX(-50%);
+  }
 
-.card__title{
-    font-size:16px;
-    margin-bottom:4px;
-}
+  .card__title {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
 
-.card__p{
-    font-size:9px;
-}
+  .card__p {
+    font-size: 9px;
+  }
 
-
-.card:nth-child(1) {
+  .card:nth-child(1) {
     transform: translate(-2px, -4px);
-}
+  }
 
-.card:nth-child(2) {
+  .card:nth-child(2) {
     transform: translate(4px, 1px);
-}
+  }
 
-.card:nth-child(3) {
+  .card:nth-child(3) {
     transform: translate(-5px, -3px);
-}
+  }
 
-.card:nth-child(4) {
+  .card:nth-child(4) {
     transform: translate(3px, 25px);
+  }
+
+  .speakers {
+    margin: 50px 0;
+  }
+
+  .speakers__title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .speakers__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+    justify-items: center;
+  }
+
+  .speakers__item {
+    width: 170px;
+    position: relative;
+    text-align: center;
+  }
+
+  /* Коло */
+
+  .speakers__image--bg {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Фото всередині кола */
+
+  .speakers__image {
+    width: 140px;
+    height: 140px;
+    display: block;
+  }
+
+  /* Накладка людини */
+
+  .speakers__person {
+    position: absolute;
+    width: 125px;
+    left: 48%;
+    top: -18px;
+    transform: translateX(-50%);
+  }
+
+  /* Імена */
+
+  .speakers__name {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  /* Опис */
+
+  .speakers__text {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--text);
+  }
 }
-
-.speakers{
-    margin:50px 0;
-}
-
-.speakers__title{
-    font-size:24px;
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.speakers__list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:35px 20px;
-    justify-items:center;
-}
-
-.speakers__item{
-    width:170px;
-    position:relative;
-    text-align:center;
-}
-
-/* Коло */
-
-.speakers__image--bg{
-    width:140px;
-    height:140px;
-    margin:0 auto;
-    border-radius:50%;
-    overflow:hidden;
-    position:relative;
-}
-
-/* Фото всередині кола */
-
-.speakers__image{
-    width:140px;
-    height:140px;
-    display:block;
-    
-}
-
-/* Накладка людини */
-
-.speakers__person{
-    position:absolute;
-    width:125px;      
-    left:48%;
-    top:-18px;        
-    transform:translateX(-50%);
-    
-}
-
-
-
-
-
-
-
-/* Імена */
-
-.speakers__name{
-    margin-top:18px;
-    font-size:18px;
-    font-weight:600;
-    line-height:1.2;
-    color:var(--text);
-}
-
-/* Опис */
-
-.speakers__text{
-    margin-top:8px;
-    font-size:14px;
-    line-height:1.3;
-    color:var(--text);
-}
-
-}
-
 
 @media (min-width: 768px) {
-
   .container {
     padding-left: 32px;
     padding-right: 32px;
   }
+
 
   .hero .container {
     align-items: flex-start;
@@ -1313,11 +1341,14 @@ body {
     gap: 55px;
   }
 
-    .header__menu-btn,
-    .header__close-btn {
-      display: none;
-    }
+  /* .header__menu-btn,
+  .header__close-btn {
+    display: none;
+  } */
 
+  .header__logo {
+    margin-bottom: 0;
+  }
 
   .hero {
     padding-top: 65px;
@@ -1448,8 +1479,6 @@ body {
     margin-top: 10px;
   }
 
-  
-
   .reviews {
     padding: 60px 20px;
   }
@@ -1550,6 +1579,11 @@ body {
     justify-content: flex-start;
   }
 
+
+  .menu-container {
+    display: none;
+  }
+
   .burger__btn {
     display: none;
   }
@@ -1573,6 +1607,12 @@ body {
 }
 
 @media (min-width: 1200px) {
+
+  .header__menu-btn,
+  .header__close-btn {
+    display: none;
+  }
+  
   .reviews__photos-container {
     height: 520px;
   }
