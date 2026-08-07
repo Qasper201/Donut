@@ -4,7 +4,7 @@
   --font-text: "Montserrat";
   --font-title: "Montserrat Alternates";
   --color-bg: #fcfcfc;
-  --color-primary: #ff8a9e;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
   --color-text-main: #4a4a4a;
   --color-text-dark: #333333;
@@ -13,7 +13,7 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
-  --color-primary: #ff8a9e;
+  --color-primary: #f3848c;
   --color-primary-hover: #ff7188;
 
   --font-family: "Poppins", sans-serif;
@@ -40,22 +40,23 @@
 
 /* Эля */
 /* header */
+
 .header {
   position: absolute;
-  width: 100%;
-  left: 0;
   top: 16px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  gap: 55px;
+  align-items: center;
 }
 
 .header__logo {
-  width: 158px;
-  height: 70px;
+  width: 96px;
 }
 
 .header__menu {
@@ -69,6 +70,14 @@
 .header__list {
   display: flex;
   gap: 20px;
+  list-style: none;
+}
+
+.header__link {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-text);
+  font-size: 18px;
 }
 
 .header__item a:hover {
@@ -81,47 +90,41 @@
   color: var(--white-text);
 }
 
-.header__link {
-  width: 81px;
-  height: 22px;
-  font-family: var(--font-text);
-  color: var(--text);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-}
+/* HERO */
 
-/* hero */
-.hero { 
-   background-image: url("../imgs/hero_bg.jpg");
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.hero {
+  background-image: url("../imgs/hero_bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  padding-bottom: 90px;
-  padding-top: 65px;
+  background-position: right top;
+  padding-top: 86px;
+  padding-bottom: 8px;
 }
 
 .hero__title {
   color: var(--text);
-  font-family: var(--font-title);
-  font-size: 60px;
+  font-family: "Montserrat Alternates";
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 65px;
-  width: 757px;
-  height: 130px;
-  margin-bottom: 20px;
-  margin-top: 65px;
+  line-height: normal;
+  letter-spacing: -0.84px;
+  padding-bottom: 18px;
 }
 
 .hero__text {
-  color: var(--text);
   font-family: var(--font-title);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-bottom: 28px;
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
 .hero__btn {
@@ -133,7 +136,7 @@
   font-weight: 400;
   line-height: normal;
   border-radius: 25px;
-  background: #f3848c;
+  background: var(--color-primary);
   width: 145px;
   height: 40px;
   box-shadow: 10px 15px 25px 0 rgba(232, 183, 183, 0.45);
@@ -141,14 +144,13 @@
 }
 
 .hero__btn:hover {
-  border-radius: 25px;
-  border: 1px solid #f3848c;
   background: var(--white-text);
-  color: #f3848c;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .hero__btn:active {
-  background: #f3848c;
+  background: var(--color-primary);
   color: var(--white-text);
   border: 1px solid transparent;
 }
@@ -156,29 +158,95 @@
 .hero__list {
   display: flex;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 28px;
+  list-style: none;
 }
 
 .hero__icon {
   fill: var(--text);
 }
-.hero__icon:hover,
-.hero__icon:focus {
-  fill: #f3848c;
+
+.hero__icon:hover {
+  fill: var(--color-primary);
 }
 
-/* about-us */
+/* burger */
+
+  .header__menu-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: var(--text);
+  }
+
+  .header__menu-icon {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text);
+}
+    .header__menu-icon::before,
+    .header__menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text);
+    }
+
+    .header__menu-icon::before {
+      top: -8px;
+    }
+
+    .header__menu-icon::after {
+      top: 8px;
+    }
+
+
 .about-us .container {
-  padding-top: 64px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.about-us__content {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  padding-top: 40px;
 }
+
+.about-us__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-us__more {
+  display: none;
+}
+
+.about-us__link {
+  display: inline-block;
+  color: var(--text);
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* ABOUT US */
 .about-us__title {
   color: var(--text);
   font-family: var(--font-title);
@@ -426,8 +494,6 @@
   margin-top: 20px;
 }
 
-
-
 /* Вова */
 
 .price {
@@ -591,7 +657,13 @@
   position: relative;
   border-radius: 24px;
   overflow: hidden;
+  min-height: 394px;
   box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../imgs/donut-registrion.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .registration-card__overlay {
@@ -687,12 +759,12 @@
   background: #f18e7c;
 }
 
-.registration-card--mobile {
+.registration-card {
   display: block;
   padding: 40px 24px;
 }
 
-.registration-card--mobile .registration-card__content {
+.registration-card .registration-card__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -700,35 +772,43 @@
   text-align: center;
 }
 
-.registration-card--mobile .registration-card__fields {
+.registration-card .registration-card__fields {
   width: 100%;
   text-align: left;
 }
 
-/* ---------- DESKTOP CARD ---------- */
-
-@media (min-width: 768px) {
-
-.header {
-  top: 24px;
-}
-
-.header .container {
+/* footer */
+.footer__list {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding-bottom: 40px;
 }
 
-
-
-
-  .price__list {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .price-card {
-    flex: 1;
-  }
+.footer__item {
+  color: #2e2520;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
+
+.footer__image {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  bottom: -17px;
+}
+
+/* footer */
+
+
+
+
 /*Саня*/
 /* Іван */
 body {
@@ -925,16 +1005,23 @@ body {
 }
 
 .contact__title {
-  font-size: 26px;
+  color: #2e2520;
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-style: normal;
   font-weight: 500;
-  margin-bottom: 8px;
-  color: #333333;
+  line-height: normal;
+  margin-bottom: 27px;
 }
 
 .contact__subtitle {
-  font-size: 13px;
-  color: #888888;
-  margin-bottom: 30px;
+  color: #2e2520;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .contact__form {
@@ -953,12 +1040,14 @@ body {
 .contact__input {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #cccccc;
-  background: transparent;
-  padding: 8px 0;
-  font-size: 14px;
-  outline: none;
-  color: #333333;
+  border-bottom: 1px solid #3c322d;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 0;
   transition: border-color 0.3s;
 }
 
@@ -968,19 +1057,23 @@ body {
 
 .contact__button {
   background: #ff8a9e;
-  color: #ffffff;
   border: none;
-  padding: 10px 40px;
-  font-size: 14px;
+  padding: 9px 40px;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(255, 138, 158, 0.4);
   transition:
     background 0.3s,
     transform 0.2s;
-  margin-top: 10px;
-  width: 100%;
-  max-width: 200px;
+  margin-top: 40px;
+  margin-bottom: 46px;
 }
 
 .contact__button:hover {
@@ -1197,6 +1290,166 @@ body {
 
 
 @media (min-width: 768px) {
+
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero .container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header {
+    top: 24px;
+  }
+
+  .header__logo {
+    width: 158px;
+  }
+
+  .header .container {
+    gap: 55px;
+  }
+
+    .header__menu-btn,
+    .header__close-btn {
+      display: none;
+    }
+
+
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+  .hero__title {
+    color: var(--text);
+    font-family: var(--font-title);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    width: 757px;
+    height: 130px;
+    margin-bottom: 20px;
+    margin-top: 65px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .about-us .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 31px;
+    padding-top: 36px;
+  }
+  .about-us__image {
+    width: 336px;
+    height: 359px;
+  }
+
+  .about-us__title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .about-us__text {
+    font-size: 18px;
+  }
+
+  /* ддддд */
+
+  .price__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .price-card {
+    flex: 1;
+  }
+
+  .registration-card {
+    background-image:
+      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
+      url("../imgs/donut-registrion.png");
+    background-position:
+      left bottom,
+      left,
+      right top;
+    background-size:
+      20% 38%,
+      80% 100%,
+      65% 100%;
+    border-radius: 2px;
+  }
+
+  .registration-card .registration-card__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 50px;
+    text-align: left;
+    color: var(--text);
+  }
+
+  .registration-card .registration-card__left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .registration-card .registration-card__divider {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 3%;
+    width: 1px;
+    height: 200px;
+    background: var(--color-text-dark);
+  }
+
+  .registration-card .registration-card__right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  /* Поля форми всередині правої колонки */
+  .registration-card .registration-card__fields {
+    display: flex;
+    flex-direction: column;
+    max-width: 234px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .registration-card__subtitle {
+    max-width: 234px;
+  }
+
+  .registration-card__input {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .registration-card__input::placeholder {
+    color: var(--text);
+  }
+
+  .registration-card .registration-card__btn {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  
+
   .reviews {
     padding: 60px 20px;
   }
@@ -1269,22 +1522,35 @@ body {
   }
 
   .contact__subtitle {
-    font-size: 14px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 16px;
   }
 
   .contact__button {
     width: auto;
   }
+
+  .footer__icon,
+  .footer__image {
+    display: none;
+  }
+
+  .footer__list {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
 }
-@media (min-width: 992px){
+@media (min-width: 992px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-.header .container {
-justify-content: flex-start;
-}
+  .header .container {
+    justify-content: flex-start;
+  }
 
-
-.burger__btn {
+  .burger__btn {
     display: none;
   }
 
@@ -1292,13 +1558,21 @@ justify-content: flex-start;
     display: block;
   }
 
+  .about-us__image {
+    width: 608px;
+    height: 381px;
+  }
+
+  .about-us__more {
+    display: block;
+  }
+
+  .about-us__link {
+    display: none;
+  }
 }
 
-@media (min-width: 1200px){
-
-  
-
-
+@media (min-width: 1200px) {
   .reviews__photos-container {
     height: 520px;
   }
@@ -1352,6 +1626,21 @@ justify-content: flex-start;
     width: 100px;
     height: 100px;
     right: 4%;
+  }
+
+  .registration-card {
+    background-image:
+      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
+      url("../imgs/donut-registrion.png");
+    background-position:
+      left bottom,
+      left,
+      right top;
+    background-size:
+      20% 38%,
+      94% 100%,
+      44% 100%;
+    border-radius: 2px;
   }
 }
 /*Іван*/
