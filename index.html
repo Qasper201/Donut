@@ -26,7 +26,6 @@
     <!--Эля-->
     <header class="header">
       <div class="container">
-        
         <a class="logo" href="#">
           <img
             class="header__logo"
@@ -63,26 +62,16 @@
           </ul>
         </nav>
 
-<button
-      class="header__menu-btn js-open-menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span class="header__menu-icon"></span>
-    </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="header__close-btn js-close-menu">✕</button>
 
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      
-      <button class="header__close-btn js-close-menu">
-        ✕
-      </button>
-      <a class="logo" href="#">
-          <img
-            class="header__logo"
-            src="./src/imgs/header__logo.png"
-            alt="donut-logo"
-          />
-        </a>
+          <a class="logo" href="#">
+            <img
+              class="header__logo"
+              src="./src/imgs/header__logo.png"
+              alt="donut-logo"
+            />
+          </a>
 
           <ul class="mobile__list">
             <li class="mobile__item">
@@ -109,7 +98,7 @@
               <a class="mobile__link" href="#">Contacts</a>
             </li>
           </ul>
-        
+        </div>
       </div>
     </header>
 
@@ -166,12 +155,13 @@
               multiple awards & recognition for excellence.
 
               <br /><br />
-             <span class="about-us__more">
-              We are going to teach you how to cook with passion and sparkles in
-              your eyes! We love what we do and believe you will enjoy our
-              cooking atmosphere!</span>
+              <span class="about-us__more">
+                We are going to teach you how to cook with passion and sparkles
+                in your eyes! We love what we do and believe you will enjoy our
+                cooking atmosphere!</span
+              >
             </p>
-             <a href="#" class="about-us__link">Read more</a>
+            <a href="#" class="about-us__link">Read more</a>
           </div>
         </div>
       </section>
@@ -265,8 +255,6 @@
               </li>
             </ul>
 
-            
-
             <p class="program__description program_none">
               Come with your dear people and friends <br />
               and you will spend an unforgettable time and <br />
@@ -278,51 +266,48 @@
           </div>
 
           <!-- CARDS -->
-           <ul class="cards__list">
-  <li class="card">
-    <div class="card__image">
-      <img src="./src/imgs/card__img1.png" alt="" class="card__img">
-    </div>
+          <ul class="cards__list">
+            <li class="card">
+              <div class="card__image">
+                <img src="./src/imgs/card__img1.png" alt="" class="card__img" />
+              </div>
 
+              <div class="card__text">
+                <h3 class="card__title">Type of the event</h3>
+                <p class="card__p">Cooking classes</p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card__image">
+                <img src="./src/imgs/card__img2.png" alt="" class="card__img" />
+              </div>
 
-    <div class="card__text">
-      <h3 class="card__title">Type of the event</h3>
-      <p class="card__p">Cooking classes</p>
-    </div>
-  </li>
-  <li class="card">
-    <div class="card__image">
-      <img src="./src/imgs/card__img2.png" alt="" class="card__img">
-    </div>
+              <div class="card__text">
+                <h3 class="card__title">Number of guests</h3>
+                <p class="card__p">1 to 20</p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card__image">
+                <img src="./src/imgs/card__img3.png" alt="" class="card__img" />
+              </div>
 
+              <div class="card__text">
+                <h3 class="card__title">Type of the event</h3>
+                <p class="card__p">18:30 (2.5 hours)</p>
+              </div>
+            </li>
+            <li class="card">
+              <div class="card__image">
+                <img src="./src/imgs/card__img4.png" alt="" class="card__img" />
+              </div>
 
-    <div class="card__text">
-      <h3 class="card__title">Number of guests</h3>
-      <p class="card__p">1 to 20</p>
-    </div>
-  </li>
-  <li class="card">
-    <div class="card__image">
-      <img src="./src/imgs/card__img3.png" alt="" class="card__img">
-    </div>
-
-    <div class="card__text">
-      <h3 class="card__title">Type of the event</h3>
-      <p class="card__p">18:30 (2.5 hours)</p>
-    </div>
-  </li>
-  <li class="card">
-    <div class="card__image">
-      <img src="./src/imgs/card__img4.png" alt="" class="card__img">
-    </div>
-
-    <div class="card__text">
-      <h3 class="card__title">The host speaks</h3>
-      <p class="card__p">English, French</p>
-    </div>
-  </li>
-</ul>
-          
+              <div class="card__text">
+                <h3 class="card__title">The host speaks</h3>
+                <p class="card__p">English, French</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -674,10 +659,8 @@
               src="./src/img/donut-registrion.png"
               alt="donuts"
             />-->
-            
 
             <div class="registration-card__content">
-             
               <div class="registration-card__left">
                 <div class="registration-card__text">
                   <span class="registration-card__date">May 23, 11:00</span>
@@ -685,16 +668,13 @@
                 </div>
               </div>
 
-              
               <div class="registration-card__divider"></div>
 
-              
               <div class="registration-card__right">
                 <h3 class="registration-card__subtitle">
                   Apply your personal info for registration
                 </h3>
 
-                
                 <form class="registration-card__fields">
                   <input
                     class="registration-card__input"
@@ -715,11 +695,11 @@
                     placeholder="Email"
                   />
                 </form>
-                
               </div>
-              <button class="registration-card__btn" type="submit">Register</button>
+              <button class="registration-card__btn" type="submit">
+                Register
+              </button>
             </div>
-            
           </div>
         </div>
       </section>
@@ -777,26 +757,26 @@
     <footer>
       <div class="container">
         <ul class="footer__list">
-        <li class="footer__item">
-     <svg class="footer__icon" width="16" height="16">
-      <use href="./src/imgs/symbol-defs.svg#icon-phone"></use>
-    </svg>
-    <p>(910)222-8855</p>
-  </li>
-  <li class="footer__item">
-    <img
-      class="footer__image"
-      src="./src/imgs/mini__donut.png"
-      alt="Donuts"
-    >
-  </li>
-  <li class="footer__item">
-    <svg class="footer__icon" width="16" height="16">
-      <use href="./src/imgs/symbol-defs.svg#icon-location"></use>
-    </svg>
-    <p>New York</p>
-  </li>
-</ul>
+          <li class="footer__item">
+            <svg class="footer__icon" width="16" height="16">
+              <use href="./src/imgs/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <p>(910)222-8855</p>
+          </li>
+          <li class="footer__item">
+            <img
+              class="footer__image"
+              src="./src/imgs/mini__donut.png"
+              alt="Donuts"
+            />
+          </li>
+          <li class="footer__item">
+            <svg class="footer__icon" width="16" height="16">
+              <use href="./src/imgs/symbol-defs.svg#icon-location"></use>
+            </svg>
+            <p>New York</p>
+          </li>
+        </ul>
       </div>
     </footer>
 
