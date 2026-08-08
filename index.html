@@ -62,12 +62,19 @@
           </ul>
         </nav>
 
+        <button
+          class="header__menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="header__menu-icon"></span>
+        </button>
+
         <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="header__close-btn js-close-menu">✕</button>
-
           <a class="logo" href="#">
             <img
-              class="header__logo"
+              class="mobile__logo"
               src="./src/imgs/header__logo.png"
               alt="donut-logo"
             />
@@ -134,11 +141,33 @@
       </section>
       <section class="about-us">
         <div class="container">
-          <img
-            class="about-us__image"
-            src="./src/imgs/donut_aboutus.jpg"
-            alt="donut"
-          />
+          <picture>
+            <source
+              media="(min-width: 992px)"
+              srcset="
+                ./src/imgs/about-us-desktop@1x.jpg 1x,
+                ./src/imgs/about-us-desktop@2x.jpg 2x
+              "
+            />
+
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./src/imgs/about-us-tablet@1x.jpg 1x,
+                ./src/imgs/about-us-tablet@2x.jpg 2x
+              "
+            />
+
+            <img
+              class="about-us__image"
+              src="./src/imgs/about-us.jpg"
+              srcset="
+                ./src/imgs/about-us-mobile@1x.jpg 1x,
+                ./src/imgs/about-us-mobile@2x.jpg 2x
+              "
+              alt="Donuts"
+            />
+          </picture>
 
           <div class="about-us__content">
             <h2 class="about-us__title">About Us</h2>
@@ -781,6 +810,6 @@
     </footer>
 
     <script src="./src/js/mobile-menu.js"></script>
-    <script src="./src/js/script.js"></script>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>

@@ -101,13 +101,14 @@
   padding-left: 20px;
 }
 .hero {
-  background-image: url("../imgs/hero_bg.jpg");
+  background-image: url("../imgs/hero_bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right top;
   padding-top: 86px;
   padding-bottom: 8px;
 }
+ 
 
 .hero__title {
   color: var(--text);
@@ -243,7 +244,7 @@
   color: #000000;
 }
 
-.header__logo {
+.mobile__logo {
   margin-bottom: 46px;
 }
 
