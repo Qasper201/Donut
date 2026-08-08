@@ -1322,85 +1322,8 @@ body {
   }
 }
 
-
-
-@media (min-width: 768px) {
-  .container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-
-  .hero .container {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .header {
-    top: 24px;
-  }
-
-  .header__logo {
-    width: 158px;
-  }
-
-  .header .container {
-    gap: 55px;
-  }
-
-  /* .header__menu-btn,
-  .header__close-btn {
-    display: none;
-  } */
-
-  .header__logo {
-    margin-bottom: 0;
-  }
-
-  .hero {
-    padding-top: 65px;
-    padding-bottom: 90px;
-  }
-
-  .hero__title {
-    color: var(--text);
-    font-family: var(--font-title);
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 65px;
-    width: 757px;
-    height: 130px;
-    margin-bottom: 20px;
-    margin-top: 65px;
-  }
-
-  .hero__text {
-    font-size: 24px;
-    margin-bottom: 28px;
-  }
-
-  .about-us .container {
-    flex-direction: row;
-    align-items: center;
-    gap: 31px;
-    padding-top: 36px;
-  }
-  .about-us__image {
-    width: 336px;
-    height: 359px;
-  }
-
-  .about-us__title {
-    font-size: 32px;
-    margin-bottom: 28px;
-  }
-
-  .about-us__text {
-    font-size: 18px;
-  }
-
-  .program {
+@media (min-width: 768px) and (max-width: 1023px) {
+     .program {
     padding: 55px 0 45px;
     background-position: right top;
     background-size: auto 100%;
@@ -1680,6 +1603,84 @@ body {
 
     text-align: center;
   }
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+
+  .hero .container {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header {
+    top: 24px;
+  }
+
+  .header__logo {
+    width: 158px;
+  }
+
+  .header .container {
+    gap: 55px;
+  }
+
+  /* .header__menu-btn,
+  .header__close-btn {
+    display: none;
+  } */
+
+  .header__logo {
+    margin-bottom: 0;
+  }
+
+  .hero {
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+  .hero__title {
+    color: var(--text);
+    font-family: var(--font-title);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    width: 757px;
+    height: 130px;
+    margin-bottom: 20px;
+    margin-top: 65px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .about-us .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 31px;
+    padding-top: 36px;
+  }
+  .about-us__image {
+    width: 336px;
+    height: 359px;
+  }
+
+  .about-us__title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .about-us__text {
+    font-size: 18px;
+  }
+
+ 
 
   .price__list {
     flex-direction: row;
