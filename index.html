@@ -719,33 +719,24 @@
           </h2>
 
           <div class="registration-card">
-            <!--<img
-              class="registration-card__img"
-              src="./src/img/donut-registrion.png"
-              alt="donuts"
-            />-->
             
 
-            <div class="registration-card__content">
+            <form class="registration-card__content">
              
-              <div class="registration-card__left">
-                <div class="registration-card__text">
+              <div class="registration-card__left registration-card__text">                
                   <span class="registration-card__date">May 23, 11:00</span>
                   <span class="registration-card__location">New York</span>
-                </div>
               </div>
 
               
-              <div class="registration-card__divider"></div>
 
               
               <div class="registration-card__right">
-                <h3 class="registration-card__subtitle">
-                  Apply your personal info for registration
-                </h3>
-
                 
-                <form class="registration-card__fields">
+                <div class="registration-card__fields">
+                  <h3 class="registration-card__subtitle">
+                    Apply your personal info for registration
+                   </h3>
                   <input
                     class="registration-card__input"
                     type="text"
@@ -764,11 +755,11 @@
                     name="email"
                     placeholder="Email"
                   />
-                </form>
+                </div>
                 
               </div>
               <button class="registration-card__btn" type="submit">Register</button>
-            </div>
+            </form>
           </div>
         </div>
       </section>
