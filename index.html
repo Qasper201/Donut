@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
@@ -112,9 +113,11 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero__title">Donut Masterclass with the Donut King</h1>
+          <h1 class="hero__title" data-aos="fade-right">
+            Donut Masterclass with the Donut King
+          </h1>
 
-          <p class="hero__text">Hosted by Eva Green</p>
+          <p class="hero__text" data-aos="fade-up-right">Hosted by Eva Green</p>
 
           <button class="hero__btn">Register</button>
 
@@ -170,7 +173,14 @@
           </picture>
 
           <div class="about-us__content">
-            <h2 class="about-us__title">About Us</h2>
+            <h2
+              class="about-us__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              About Us
+            </h2>
 
             <p class="about-us__text">
               Oh My Donut is the shop which adores tasty deserts and spend hours
@@ -198,7 +208,14 @@
       <section class="program">
         <div class="container">
           <div class="program__content">
-            <h2 class="program__title">Program</h2>
+            <h2
+              class="program__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Program
+            </h2>
 
             <p class="program__description">
               Indulge in this immersive sweet treat <br />
@@ -297,7 +314,7 @@
           <!-- CARDS -->
           <ul class="cards__list">
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img1.png" alt="" class="card__img" />
               </div>
 
@@ -307,7 +324,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img2.png" alt="" class="card__img" />
               </div>
 
@@ -317,7 +334,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img3.png" alt="" class="card__img" />
               </div>
 
@@ -327,7 +344,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img4.png" alt="" class="card__img" />
               </div>
 
@@ -589,7 +606,14 @@
       <!-- REVIEWS -->
 
       <section class="reviews">
-        <h2 class="reviews__title">Reviews</h2>
+        <h2
+          class="reviews__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Reviews
+        </h2>
 
         <div class="reviews__slider">
           <div class="reviews__decor reviews__decor--circle-1"></div>
@@ -680,7 +704,14 @@
 
       <section class="registration">
         <div class="container">
-          <h2 class="registration__title">Registration</h2>
+          <h2
+            class="registration__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Registration
+          </h2>
 
           <div class="registration-card">
             <!--<img
@@ -736,7 +767,14 @@
       <!-- CONTACT -->
 
       <section class="contact">
-        <h2 class="contact__title">Contact</h2>
+        <h2
+          class="contact__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Contact
+        </h2>
 
         <p class="contact__subtitle">We will answer any question!</p>
 
@@ -808,6 +846,14 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 
     <script src="./src/js/mobile-menu.js"></script>
     <script src="./src/js/index.js"></script>
