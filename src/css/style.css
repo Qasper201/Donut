@@ -108,7 +108,18 @@
   padding-top: 86px;
   padding-bottom: 8px;
 }
- 
+
+
+
+.hero__item,
+.hero__icon {
+  transition: transform 0.35s ease, fill 0.35s ease;
+}
+
+.hero__item:hover .hero__icon {
+  transform: translateY(-4px) scale(1.15);
+  fill: var(--color-primary);
+}
 
 .hero__title {
   color: var(--text);
@@ -300,6 +311,20 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.about-us__link:hover {
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.about-us__image {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.about-us__image:hover {
+  transform: translateY(-6px) scale(1.01);
 }
 
 /* ABOUT US */
@@ -360,6 +385,24 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  transition: transform 0.35s ease;
+}
+
+.program__item:hover {
+  transform: translateX(8px);
+}
+
+.program__icon,
+.program__text {
+  transition: transform 0.35s ease, color 0.35s ease, filter 0.35s ease;
+}
+
+.program__item:hover .program__icon {
+  transform: translateX(6px);
+}
+
+.program__item:hover .program__text {
+  color: var(--color-primary);
 }
 
 .program .container {
@@ -779,6 +822,10 @@
   border-color: var(--white-text);
 }
 
+.registration-card__subtitle {
+  text-align: center;
+}
+
 .registration-card__divider {
   width: 100%;
   height: 1px;
@@ -822,35 +869,124 @@
   text-align: left;
 }
 
-/* footer */
-.footer__list {
-  display: flex;
-  justify-content: space-between;
+
+
+
+@media (min-width: 768px) {
+
+.header {
+  top: 24px;
+}
+
+.header .container {
   align-items: center;
-  padding-bottom: 40px;
 }
 
-.footer__item {
-  color: #2e2520;
-  font-family: var(--font-text);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+
+
+
+  .price__list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .price-card {
+    flex: 1;
+  }
+
+
+  .registration-card{
+    background-image: url("../imgs/donut-registrion-left.png"),
+    url("../imgs/ogrizok.png"), 
+    url("../imgs/donut-registrion.png");
+    background-position: left bottom, left, right top;
+    background-size: 20% 38%, 80% 100%, 65% 100%;
+    border-radius: 2px;
+   
+    
+  }
+
+  .registration-card .registration-card__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 50px;
+    text-align: left;
+    color: var(--text)
+  }
+
+  
+  .registration-card .registration-card__left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .registration-card .registration-card__divider {
+    position: absolute;
+    margin-left: 22%;
+    margin-top: 3%;
+    width: 1px;
+    height: 200px;
+    background: var(--color-text-dark);
+    
+  }
+
+
+  .registration-card .registration-card__right {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;    
+    gap: 20px;                 
+    align-items: flex-start;   
+  }
+
+  /* Поля форми всередині правої колонки */
+  .registration-card .registration-card__fields {
+    display: flex;
+    flex-direction: column;
+    max-width: 234px;
+    gap: 20px;
+    width: 100%;
+    
+  }
+
+  .registration-card__subtitle{
+    max-width: 234px;
+  }
+
+  .registration-card__input {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .registration-card__input::placeholder {
+  color: var(--text);
+  }
+
+
+
+  
+  .registration-card .registration-card__btn {
+    width: 200px;              
+    margin-top: 10px;
+  }
 }
 
-.footer__image {
-  width: 60px;
-  height: 40px;
-  position: relative;
-  bottom: -17px;
+@media (min-width: 1200px) {
+  .registration-card{
+    background-image: url("../imgs/donut-registrion-left.png"),
+    url("../imgs/ogrizok.png"), 
+    url("../imgs/donut-registrion.png");
+    background-position: left bottom, left, right top;
+    background-size: 20% 38%, 94% 100%, 44% 100%;
+    border-radius: 2px;
+  } 
+
+
 }
-
-/* footer */
-
 /*Саня*/
 /* Іван */
 body {
@@ -1109,7 +1245,8 @@ body {
   box-shadow: 0 5px 15px rgba(255, 138, 158, 0.4);
   transition:
     background 0.3s,
-    transform 0.2s;
+    transform 0.2s,
+    box-shadow 0.3s ease;
   margin-top: 40px;
   margin-bottom: 46px;
 }
@@ -1117,6 +1254,31 @@ body {
 .contact__button:hover {
   background: #ff7188;
   transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 138, 158, 0.35);
+}
+
+.contact__social-link {
+  color: #333333;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.contact__social-link:hover {
+  color: #ff8a9e;
+  transform: translateY(-3px);
+}
+
+.contact__social-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--icon-color);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.contact__social-link:hover .contact__social-icon {
+  fill: var(--color-primary-hover);
+  transform: scale(1.1);
 }
 
 .contact__socials {

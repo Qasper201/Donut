@@ -14,6 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
@@ -108,26 +113,28 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero__title">Donut Masterclass with the Donut King</h1>
+          <h1 class="hero__title" data-aos="fade-right">
+            Donut Masterclass with the Donut King
+          </h1>
 
-          <p class="hero__text">Hosted by Eva Green</p>
+          <p class="hero__text" data-aos="fade-up-right">Hosted by Eva Green</p>
 
-          <button class="hero__btn">Register</button>
+          <button class="hero__btn" data-aos="zoom-in" data-aos-delay="300">Register</button>
 
           <ul class="hero__list">
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="500">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-twitter"></use>
               </svg>
             </li>
 
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="600">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </li>
 
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="700">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-facebook"></use>
               </svg>
@@ -135,9 +142,6 @@
           </ul>
         </div>
       </section>
-      </div>
-
-      <main>
       <section class="about-us">
         <div class="container">
           <picture>
@@ -169,7 +173,14 @@
           </picture>
 
           <div class="about-us__content">
-            <h2 class="about-us__title">About Us</h2>
+            <h2
+              class="about-us__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              About Us
+            </h2>
 
             <p class="about-us__text">
               Oh My Donut is the shop which adores tasty deserts and spend hours
@@ -197,7 +208,14 @@
       <section class="program">
         <div class="container">
           <div class="program__content">
-            <h2 class="program__title">Program</h2>
+            <h2
+              class="program__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Program
+            </h2>
 
             <p class="program__description">
               Indulge in this immersive sweet treat <br />
@@ -296,7 +314,7 @@
           <!-- CARDS -->
           <ul class="cards__list">
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img1.png" alt="" class="card__img" />
               </div>
 
@@ -306,7 +324,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img2.png" alt="" class="card__img" />
               </div>
 
@@ -316,7 +334,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img3.png" alt="" class="card__img" />
               </div>
 
@@ -326,7 +344,7 @@
               </div>
             </li>
             <li class="card">
-              <div class="card__image">
+              <div class="card__image" data-aos="zoom-in">
                 <img src="./src/imgs/card__img4.png" alt="" class="card__img" />
               </div>
 
@@ -343,7 +361,14 @@
 
       <section class="speakers">
         <div class="container">
-          <h2 class="speakers__title">Speakers</h2>
+          <h2
+            class="speakers__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Speakers
+          </h2>
 
           <ul class="speakers__list">
             <li class="speakers__item">
@@ -447,7 +472,14 @@
 
       <section class="price">
         <div class="container">
-          <h2 class="price__title">Price</h2>
+          <h2
+            class="price__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Price
+          </h2>
 
           <div class="price__list">
             <div class="price-card">
@@ -586,10 +618,16 @@
       </section>
 
       <!-- REVIEWS -->
-       
 
       <section class="reviews">
-        <h2 class="reviews__title">Reviews</h2>
+        <h2
+          class="reviews__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Reviews
+        </h2>
 
         <div class="reviews__slider">
           <div class="reviews__decor reviews__decor--circle-1"></div>
@@ -598,9 +636,8 @@
 
           <div class="reviews__decor reviews__decor--circle-3"></div>
 
-  <div class="reviews__photos-container">
-   
- <div class="reviews__user-card reviews__user-card--left">
+          <div class="reviews__photos-container">
+  <div class="reviews__user-card reviews__user-card--left">
   <div class="reviews__photo-holder">
     <picture>
       <source srcset="./src/imgs/John@1.png 1x, ./src/imgs/John@2.png 2x">
@@ -650,10 +687,8 @@
   </div>
   <h3 class="reviews__username">Elisabeth</h3>
 </div>
-
-  </div>
-</div>
-      </div>
+          </div>
+        </div>
 
         <div class="reviews__content">
           <p class="reviews__text">
@@ -674,7 +709,14 @@
 
       <section class="registration">
         <div class="container">
-          <h2 class="registration__title">Registration</h2>
+          <h2
+            class="registration__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Registration
+          </h2>
 
           <div class="registration-card">
             <!--<img
@@ -682,8 +724,10 @@
               src="./src/img/donut-registrion.png"
               alt="donuts"
             />-->
+            
 
             <div class="registration-card__content">
+             
               <div class="registration-card__left">
                 <div class="registration-card__text">
                   <span class="registration-card__date">May 23, 11:00</span>
@@ -691,13 +735,16 @@
                 </div>
               </div>
 
+              
               <div class="registration-card__divider"></div>
 
+              
               <div class="registration-card__right">
                 <h3 class="registration-card__subtitle">
                   Apply your personal info for registration
                 </h3>
 
+                
                 <form class="registration-card__fields">
                   <input
                     class="registration-card__input"
@@ -718,20 +765,27 @@
                     placeholder="Email"
                   />
                 </form>
+                
               </div>
-              <button class="registration-card__btn" type="submit">
-                Register
-              </button>
+              <button class="registration-card__btn" type="submit">Register</button>
             </div>
           </div>
+        </div>
       </section>
 
       <!-- CONTACT -->
 
-      <!--Ваня-->
-    < <section class="contact">
-      <h2 class="contact__title">Contact</h2>
-      <p class="contact__subtitle">We will answer any question!</p>
+      <section class="contact">
+        <h2
+          class="contact__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Contact
+        </h2>
+
+        <p class="contact__subtitle">We will answer any question!</p>
 
         <form class="contact__form">
           <div class="contact__field">
@@ -801,6 +855,14 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 
     <script src="./src/js/mobile-menu.js"></script>
     <script src="./src/js/index.js"></script>
