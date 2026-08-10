@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
@@ -62,33 +63,78 @@
           </ul>
         </nav>
 
-        <button class="burger__btn">Burger</button>
+        <button
+          class="header__menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="header__menu-icon"></span>
+        </button>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="header__close-btn js-close-menu">✕</button>
+          <a class="logo" href="#">
+            <img
+              class="mobile__logo"
+              src="./src/imgs/header__logo.png"
+              alt="donut-logo"
+            />
+          </a>
+
+          <ul class="mobile__list">
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">About Us</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Program</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Speakers</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Price</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Reviews</a>
+            </li>
+
+            <li class="mobile__item">
+              <a class="mobile__link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="container">
-          <h1 class="hero__title">Donut Masterclass with the Donut King</h1>
+          <h1 class="hero__title" data-aos="fade-right">
+            Donut Masterclass with the Donut King
+          </h1>
 
-          <p class="hero__text">Hosted by Eva Green</p>
+          <p class="hero__text" data-aos="fade-up-right">Hosted by Eva Green</p>
 
-          <button class="hero__btn">Register</button>
+          <button class="hero__btn" data-aos="zoom-in" data-aos-delay="300">Register</button>
 
           <ul class="hero__list">
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="500">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-twitter"></use>
               </svg>
             </li>
 
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="600">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </li>
 
-            <li class="hero__item">
+            <li class="hero__item" data-aos="fade-up" data-aos-delay="700">
               <svg class="hero__icon" width="16" height="16">
                 <use href="./src/imgs/symbol-defs.svg#icon-facebook"></use>
               </svg>
@@ -98,14 +144,43 @@
       </section>
       <section class="about-us">
         <div class="container">
-          <img
-            class="about-us__image"
-            src="./src/imgs/donut_aboutus.jpg"
-            alt="donut"
-          />
+          <picture>
+            <source
+              media="(min-width: 992px)"
+              srcset="
+                ./src/imgs/about-us-desktop@1x.jpg 1x,
+                ./src/imgs/about-us-desktop@2x.jpg 2x
+              "
+            />
+
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./src/imgs/about-us-tablet@1x.jpg 1x,
+                ./src/imgs/about-us-tablet@2x.jpg 2x
+              "
+            />
+
+            <img
+              class="about-us__image"
+              src="./src/imgs/about-us.jpg"
+              srcset="
+                ./src/imgs/about-us-mobile@1x.jpg 1x,
+                ./src/imgs/about-us-mobile@2x.jpg 2x
+              "
+              alt="Donuts"
+            />
+          </picture>
 
           <div class="about-us__content">
-            <h2 class="about-us__title">About Us</h2>
+            <h2
+              class="about-us__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              About Us
+            </h2>
 
             <p class="about-us__text">
               Oh My Donut is the shop which adores tasty deserts and spend hours
@@ -119,11 +194,13 @@
               multiple awards & recognition for excellence.
 
               <br /><br />
-
-              We are going to teach you how to cook with passion and sparkles in
-              your eyes! We love what we do and believe you will enjoy our
-              cooking atmosphere!
+              <span class="about-us__more">
+                We are going to teach you how to cook with passion and sparkles
+                in your eyes! We love what we do and believe you will enjoy our
+                cooking atmosphere!</span
+              >
             </p>
+            <a href="#" class="about-us__link">Read more</a>
           </div>
         </div>
       </section>
@@ -131,7 +208,14 @@
       <section class="program">
         <div class="container">
           <div class="program__content">
-            <h2 class="program__title">Program</h2>
+            <h2
+              class="program__title"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              Program
+            </h2>
 
             <p class="program__description">
               Indulge in this immersive sweet treat <br />
@@ -217,60 +301,55 @@
               </li>
             </ul>
 
-            <p class="program__description">
+            <p class="program__description program_none">
               Come with your dear people and friends <br />
               and you will spend an unforgettable time and <br />
               will become a real professional <br />
               in donuts cooking!
             </p>
+
+            <p class="program_block">Read more</p>
           </div>
 
           <!-- CARDS -->
-
           <ul class="cards__list">
             <li class="card">
-              <div class="card__image">
-                <img
-                  class="card__img"
-                  src="./src/imgs/card_img1.png"
-                  alt="Cooking classes"
-                />
+              <div class="card__image" data-aos="zoom-in">
+                <img src="./src/imgs/card__img1.png" alt="" class="card__img" />
               </div>
-            </div>
 
               <div class="card__text">
                 <h3 class="card__title">Type of the event</h3>
-
                 <p class="card__p">Cooking classes</p>
               </div>
             </li>
-
             <li class="card">
-              <img class="card__img" src="./src/imgs/card_img2.png" alt="" />
+              <div class="card__image" data-aos="zoom-in">
+                <img src="./src/imgs/card__img2.png" alt="" class="card__img" />
+              </div>
 
               <div class="card__text">
                 <h3 class="card__title">Number of guests</h3>
-
                 <p class="card__p">1 to 20</p>
               </div>
             </li>
-
             <li class="card">
-              <img class="card__img" src="./src/imgs/card_img3.png" alt="" />
+              <div class="card__image" data-aos="zoom-in">
+                <img src="./src/imgs/card__img3.png" alt="" class="card__img" />
+              </div>
 
               <div class="card__text">
                 <h3 class="card__title">Type of the event</h3>
-
                 <p class="card__p">18:30 (2.5 hours)</p>
               </div>
             </li>
-
             <li class="card">
-              <img class="card__img" src="./src/imgs/card_img4.png" alt="" />
+              <div class="card__image" data-aos="zoom-in">
+                <img src="./src/imgs/card__img4.png" alt="" class="card__img" />
+              </div>
 
               <div class="card__text">
                 <h3 class="card__title">The host speaks</h3>
-
                 <p class="card__p">English, French</p>
               </div>
             </li>
@@ -282,7 +361,14 @@
 
       <section class="speakers">
         <div class="container">
-          <h2 class="speakers__title">Speakers</h2>
+          <h2
+            class="speakers__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Speakers
+          </h2>
 
           <ul class="speakers__list">
             <li class="speakers__item">
@@ -380,11 +466,20 @@
         </div>
       </section>
 
+      <!-- SPEAKERS -->
+
       <!-- PRICE -->
 
       <section class="price">
         <div class="container">
-          <h2 class="price__title">Price</h2>
+          <h2
+            class="price__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Price
+          </h2>
 
           <div class="price__list">
             <div class="price-card">
@@ -525,7 +620,14 @@
       <!-- REVIEWS -->
 
       <section class="reviews">
-        <h2 class="reviews__title">Reviews</h2>
+        <h2
+          class="reviews__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Reviews
+        </h2>
 
         <div class="reviews__slider">
           <div class="reviews__decor reviews__decor--circle-1"></div>
@@ -616,31 +718,43 @@
 
       <section class="registration">
         <div class="container">
-          <h2 class="registration__title">Registration</h2>
+          <h2
+            class="registration__title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            Registration
+          </h2>
 
           <div class="registration-card">
+            <!--<img
+              class="registration-card__img"
+              src="./src/img/donut-registrion.png"
+              alt="donuts"
+            />-->
+            
 
             <div class="registration-card__content">
              
-              
-                <div class="registration-card__text registration-card__left">
+              <div class="registration-card__left">
+                <div class="registration-card__text">
                   <span class="registration-card__date">May 23, 11:00</span>
                   <span class="registration-card__location">New York</span>
                 </div>
-  
+              </div>
 
               
               <div class="registration-card__divider"></div>
 
               
-              <form class="registration-card__right">
-                
+              <div class="registration-card__right">
+                <h3 class="registration-card__subtitle">
+                  Apply your personal info for registration
+                </h3>
 
                 
-                <div class="registration-card__fields">
-                  <h3 class="registration-card__subtitle">
-                    Apply your personal info for registration
-                  </h3>
+                <form class="registration-card__fields">
                   <input
                     class="registration-card__input"
                     type="text"
@@ -659,12 +773,11 @@
                     name="email"
                     placeholder="Email"
                   />
-                </div>
-                <button class="registration-card__btn" type="submit">Register</button>
-              </form>
-              
+                </form>
+                
+              </div>
+              <button class="registration-card__btn" type="submit">Register</button>
             </div>
-            
           </div>
         </div>
       </section>
@@ -672,7 +785,14 @@
       <!-- CONTACT -->
 
       <section class="contact">
-        <h2 class="contact__title">Contact</h2>
+        <h2
+          class="contact__title"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          Contact
+        </h2>
 
         <p class="contact__subtitle">We will answer any question!</p>
 
@@ -720,9 +840,40 @@
     </main>
 
     <footer>
-      <div class="container"></div>
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <svg class="footer__icon" width="16" height="16">
+              <use href="./src/imgs/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <p>(910)222-8855</p>
+          </li>
+          <li class="footer__item">
+            <img
+              class="footer__image"
+              src="./src/imgs/mini__donut.png"
+              alt="Donuts"
+            />
+          </li>
+          <li class="footer__item">
+            <svg class="footer__icon" width="16" height="16">
+              <use href="./src/imgs/symbol-defs.svg#icon-location"></use>
+            </svg>
+            <p>New York</p>
+          </li>
+        </ul>
+      </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    <script src="./src/js/script.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+
+    <script src="./src/js/mobile-menu.js"></script>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
