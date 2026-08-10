@@ -14,10 +14,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
@@ -139,6 +135,9 @@
           </ul>
         </div>
       </section>
+      </div>
+
+      <main>
       <section class="about-us">
         <div class="container">
           <picture>
@@ -587,6 +586,7 @@
       </section>
 
       <!-- REVIEWS -->
+       
 
       <section class="reviews">
         <h2 class="reviews__title">Reviews</h2>
@@ -598,68 +598,62 @@
 
           <div class="reviews__decor reviews__decor--circle-3"></div>
 
-          <div class="reviews__photos-container">
-            <div class="reviews__user-card reviews__user-card--left">
-              <div class="reviews__photo-holder">
-                <img
-                  src="./src/imgs/John@1.png"
-                  alt="John"
-                  class="reviews__user-img"
-                />
-              </div>
+  <div class="reviews__photos-container">
+   
+ <div class="reviews__user-card reviews__user-card--left">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./src/imgs/John@1.png 1x, ./src/imgs/John@2.png 2x">
+      <img src="./src/imgs/John@1.png" alt="John" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star"><use href="./src/imgs/symbol-defs.svg#icon-star-empty"></use></svg>
+  </div>
+  <h3 class="reviews__username">John</h3>
+</div>
 
-              <div class="reviews__stars">
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star">★</span>
-              </div>
+<div class="reviews__user-card reviews__user-card--center">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./src/imgs/Will@1.png 1x, ./src/imgs/Will@2.png 2x">
+      <img src="./src/imgs/Will@1.png" alt="Will" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+  </div>
+  <h3 class="reviews__username">Will</h3>
+</div>
 
-              <h3 class="reviews__username">John</h3>
-            </div>
+<div class="reviews__user-card reviews__user-card--right">
+  <div class="reviews__photo-holder">
+    <picture>
+      <source srcset="./src/imgs/Elisabeth@1.png 1x, ./src/imgs/Elisabeth@2.png 2x">
+      <img src="./src/imgs/Elisabeth@1.png" alt="Elisabeth" class="reviews__user-img" loading="lazy">
+    </picture>
+  </div>
+  <div class="reviews__stars">
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+    <svg class="reviews__star reviews__star--active"><use href="./src/imgs/symbol-defs.svg#icon-star"></use></svg>
+  </div>
+  <h3 class="reviews__username">Elisabeth</h3>
+</div>
 
-            <div class="reviews__user-card reviews__user-card--center">
-              <div class="reviews__photo-holder">
-                <img
-                  src="./src/imgs/Will@1.png"
-                  alt="Will"
-                  class="reviews__user-img"
-                />
-              </div>
-
-              <div class="reviews__stars">
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-              </div>
-
-              <h3 class="reviews__username">Will</h3>
-            </div>
-
-            <div class="reviews__user-card reviews__user-card--right">
-              <div class="reviews__photo-holder">
-                <img
-                  src="./src/imgs/Elisabeth@1.png"
-                  alt="Elisabeth"
-                  class="reviews__user-img"
-                />
-              </div>
-
-              <div class="reviews__stars">
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-                <span class="reviews__star reviews__star--active">★</span>
-              </div>
-
-              <h3 class="reviews__username">Elisabeth</h3>
-            </div>
-          </div>
-        </div>
+  </div>
+</div>
+      </div>
 
         <div class="reviews__content">
           <p class="reviews__text">
@@ -730,15 +724,14 @@
               </button>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- CONTACT -->
 
-      <section class="contact">
-        <h2 class="contact__title">Contact</h2>
-
-        <p class="contact__subtitle">We will answer any question!</p>
+      <!--Ваня-->
+    < <section class="contact">
+      <h2 class="contact__title">Contact</h2>
+      <p class="contact__subtitle">We will answer any question!</p>
 
         <form class="contact__form">
           <div class="contact__field">
