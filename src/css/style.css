@@ -988,7 +988,7 @@
 }
 
 .footer__item a {
-  color: var(--color-contact-text);
+  color: #2e2520;
   font-family: var(--font-text);
   font-size: 16px;
   font-style: normal;
@@ -997,6 +997,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.footer_contacts {
+  color: #2e2520;
 }
 
 .footer__image {
