@@ -642,6 +642,7 @@
   padding: 60px 0;
   background-color: #fdf3f0;
   overflow: hidden;
+  
 }
 
 .price::before,
@@ -696,6 +697,9 @@
     transform 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease;
+  background-image: url("../imgs/price_background@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .price-card:hover {
@@ -744,6 +748,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("../imgs/shapka@1x.png");
 }
 
 .price-card__btn {
@@ -766,6 +771,9 @@
 .price-card__btn:hover {
   background-color: #f18e7c;
 }
+
+
+
 
 .registration {
   position: relative;
@@ -802,7 +810,7 @@
   box-shadow: 0 10px 30px rgba(224, 122, 95, 0.08);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("../imgs/donut-registrion.png");
+    url("../imgs/donut-registrion@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -963,122 +971,6 @@
 
 
 
-
-@media (min-width: 768px) {
-
-.header {
-  top: 24px;
-}
-
-.header .container {
-  align-items: center;
-}
-
-.hero {
-    background-image: url("../imgs/hero_bg-tablet@1x.jpg");
-  }
-
-
-  .price__list {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .price-card {
-    flex: 1;
-  }
-
-
-  .registration-card{
-    background-image: url("../imgs/donut-registrion-left.png"),
-    url("../imgs/ogrizok.png"), 
-    url("../imgs/donut-registrion.png");
-    background-position: left bottom, left, right top;
-    background-size: 20% 38%, 80% 100%, 65% 100%;
-    border-radius: 2px;
-   
-    
-  }
-
-  .registration-card .registration-card__content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding: 50px;
-    text-align: left;
-    color: var(--text)
-  }
-
-  
-  .registration-card .registration-card__left {
-    display: flex;
-    justify-content: center;
-  }
-
-  
-  .registration-card .registration-card__divider {
-    position: absolute;
-    margin-left: 22%;
-    margin-top: 3%;
-    width: 1px;
-    height: 200px;
-    background: var(--color-text-dark);
-    
-  }
-
-
-  .registration-card .registration-card__right {
-    
-    display: flex;   
-    gap: 20px;                 
-    align-items: flex-start;   
-  }
-
-  /* Поля форми всередині правої колонки */
-  .registration-card .registration-card__fields {
-    display: flex;
-    flex-direction: column;
-    max-width: 234px;
-    gap: 20px;
-    width: 100%;
-    
-  }
-
-  .registration-card__subtitle{
-    max-width: 234px;
-  }
-
-  .registration-card__input {
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .registration-card__input::placeholder {
-  color: var(--text);
-  }
-
-
-
-  
-  .registration-card .registration-card__btn {
-    width: 200px;              
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .registration-card{
-    background-image: url("../imgs/donut-registrion-left.png"),
-    url("../imgs/ogrizok.png"), 
-    url("../imgs/donut-registrion.png");
-    background-position: left bottom, left, right top;
-    background-size: 20% 38%, 94% 100%, 44% 100%;
-    border-radius: 2px;
-  } 
-
-
-}
 /*Саня*/
 /* Іван */
 body {
@@ -1876,8 +1768,8 @@ body {
 
   .registration-card {
     background-image:
-      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
-      url("../imgs/donut-registrion.png");
+      url("../imgs/donut-registrion-left@1x.png"), url("../imgs/ogrizok@1x.png"),
+      url("../imgs/donut-registrion@1x.png");
     background-position:
       left bottom,
       left,
@@ -1893,7 +1785,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    justify-content: center;
     gap: 45px;
     padding: 50px;
     text-align: left;
@@ -1949,6 +1841,7 @@ body {
   .registration-card .registration-card__btn {
     width: 200px;
     margin-top: 10px;
+    margin-left: 30px;
   }
 
   /* Стили карточек отзывов для планшета */
@@ -2152,8 +2045,8 @@ body {
 
   .registration-card {
     background-image:
-      url("../imgs/donut-registrion-left.png"), url("../imgs/ogrizok.png"),
-      url("../imgs/donut-registrion.png");
+      url("../imgs/donut-registrion-left@1x.png"), url("../imgs/ogrizok@1x.png"),
+      url("../imgs/donut-registrion@1x.png");
     background-position:
       left bottom,
       left,
@@ -2163,6 +2056,43 @@ body {
       94% 100%,
       44% 100%;
     border-radius: 2px;
+ 
+  }
+
+  .registration-card__btn{
+    margin-left: 0;
   }
 }
 /*Іван*/
+@media screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .price-card {
+    background-image: url("../imgs/price_background@2x.png");
+    background-size: cover;
+  }
+
+  .registration-card {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url("../imgs/donut-registrion@2x.png");
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi),
+       screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .registration-card {
+    background-image:
+      url("../imgs/donut-registrion-left@2x.png"),
+      url("../imgs/ogrizok@2x.png"),
+      url("../imgs/donut-registrion@2x.png");
+    background-position:
+      left bottom,
+      left,
+      right top;
+    background-size:
+      20% 38%,
+      80% 100%,
+      65% 100%;
+  }
+}
