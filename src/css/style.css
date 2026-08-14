@@ -910,6 +910,33 @@
 }
 
 
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.footer__item {
+  color: #2e2520;
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__image {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  bottom: -17px;
+}
+
+
 
 
 @media (min-width: 768px) {
