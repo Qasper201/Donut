@@ -950,7 +950,7 @@
   padding-bottom: 40px;
 }
 
-.footer__item a {
+.footer__item {
   color: #2e2520;
   font-family: var(--font-text);
   font-size: 16px;
@@ -960,6 +960,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.footer_contacts {
+  color: #2e2520;
 }
 
 .footer__image {
