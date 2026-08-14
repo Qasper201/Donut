@@ -2105,28 +2105,31 @@ body {
   }
 }
 /*Іван*/
-@media screen and (min-resolution: 192dpi),
-       screen and (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
   .price-card {
-    background-image: url("../imgs/price_background@2x.png");
-    background-size: cover;
+    background-image: url("../imgs/price-background@2x.png"); 
+    background-size: 300px 218px;
+    
   }
 
   .registration-card {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-      url("../imgs/donut-registrion@2x.png");
+      url("../imgs/donut-registrion@2x.jpg");
     background-size: cover;
   }
 }
 
-@media screen and (min-width: 768px) and (min-resolution: 192dpi),
-       screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 768px) and (min-resolution: 192dpi),
+       (min-width: 768px) and (min-resolution: 2dppx) {
   .registration-card {
     background-image:
       url("../imgs/donut-registrion-left@2x.png"),
       url("../imgs/ogrizok@2x.png"),
-      url("../imgs/donut-registrion@2x.png");
+      url("../imgs/donut-registrion@2x.jpg");
     background-position:
       left bottom,
       left,
