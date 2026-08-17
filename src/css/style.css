@@ -1747,8 +1747,8 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 65px;
-    width: 757px;
-    height: 130px;
+    max-width: 757px;
+    height: auto;
     margin-bottom: 20px;
     margin-top: 65px;
   }

@@ -9,11 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -72,7 +67,7 @@
         </button>
 
         <div class="menu-container js-menu-container" id="mobile-menu">
-          <button class="header__close-btn js-close-menu">✕</button>
+          <button class="header__close-btn js-close-menu" aria-label="Close navigation menu">✕</button>
           <a class="logo" href="#">
             <img
               class="mobile__logo"
@@ -165,14 +160,18 @@
               "
             />
 
-            <img
-              class="about-us__image"
-              src="./src/imgs/about-us.jpg"
+            <source
+              media="(max-width: 767px)"
               srcset="
                 ./src/imgs/about-us-mobile@1x.jpg 1x,
                 ./src/imgs/about-us-mobile@2x.jpg 2x
               "
-              alt="Donuts"
+            />
+
+            <img
+              class="about-us__image"
+              src="./src/imgs/about-us.jpg"
+              alt="Donuts" loading="lazy"
             />
           </picture>
 
@@ -941,7 +940,7 @@
             <svg class="footer__icon" width="16" height="16">
               <use href="./src/imgs/symbol-defs.svg#icon-location"></use>
             </svg>
-            <p class="footer_contacts">New York</p>
+            <a class="footer_contacts" href="#">New York</a>
           </li>
         </ul>
       </div>
