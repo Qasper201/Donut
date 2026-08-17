@@ -13,14 +13,12 @@
   --color-border: #cccccc;
   --color-star-active: #ffcc00;
   --color-star-inactive: #e2e2e2;
-  --divider-color: #D9D9D9;
+  --divider-color: #d9d9d9;
   --font-family: "Poppins", sans-serif;
-  
- 
+
   --color-menu-bg: #e5e2e3;
   --color-black: #000000;
-  
- 
+
   --color-price-bg: #fdf3f0;
   --color-price-title: #2b1c17;
   --color-price-card-bg: #ffffff;
@@ -28,7 +26,7 @@
   --color-price-card-feature: #4a3d38;
   --color-price-card-icon-bg: #f6a89a;
   --color-price-button-hover: #f18e7c;
-  
+
   --color-overlay-dark: rgba(0, 0, 0, 0.45);
   --color-overlay-light: rgba(0, 0, 0, 0.04);
   --color-overlay-text: rgba(0, 0, 0, 0.5);
@@ -41,23 +39,18 @@
   --color-shadow-photo: rgba(0, 0, 0, 0.06);
   --color-shadow-text: rgba(0, 0, 0, 0.55);
   --color-shadow-text-2: rgba(0, 0, 0, 0.02);
-  
-  
+
   --color-contact-button: #ff8a9e;
   --color-contact-button-hover: #ff7188;
-  
-  
+
   --color-contact-text: #2e2520;
-  
-  
+
   --color-review-accent: #ff8a9e;
-  
-  
+
   --color-gradient-start: rgba(248, 110, 103, 0.63);
   --color-gradient-end: rgba(253, 86, 143, 0.86);
   --color-white-semi-light: rgba(255, 255, 255, 0.6);
   --color-white-semi-opaque: rgba(255, 255, 255, 0.8);
-
 }
 
 *,
@@ -147,35 +140,31 @@
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi),
-       screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../imgs/hero_bg-mobile@2x.jpg");
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px)
-       and (min-resolution: 192dpi),
-       screen and (min-width: 768px) and (max-width: 1199px)
-       and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../imgs/hero_bg-tablet@2x.jpg");
   }
 }
 
-@media screen and (min-width: 1200px)
-       and (min-resolution: 192dpi),
-       screen and (min-width: 1200px)
-       and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../imgs/hero_bg-desktop@2x.jpg");
   }
 }
 
-
-
 .hero__item,
 .hero__icon {
-  transition: transform 0.35s ease, fill 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    fill 0.35s ease;
 }
 
 .hero__item:hover .hero__icon {
@@ -296,7 +285,7 @@
   position: fixed;
   top: 0;
   left: 0;
-   width: 100%;
+  width: 100%;
   height: 100%;
   padding: 20px;
   background-color: var(--color-menu-bg);
@@ -373,7 +362,9 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  transition: color 0.35s ease, transform 0.35s ease;
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
 }
 
 .about-us__link:hover {
@@ -382,7 +373,9 @@
 }
 
 .about-us__image {
-  transition: transform 0.35s ease, filter 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
 .about-us__image:hover {
@@ -456,7 +449,10 @@
 
 .program__icon,
 .program__text {
-  transition: transform 0.35s ease, color 0.35s ease, filter 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    filter 0.35s ease;
 }
 
 .program__item:hover .program__icon {
@@ -511,8 +507,6 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-
-
 
 .cards__list {
   width: 560px;
@@ -621,7 +615,6 @@
 .speakers__image {
   display: block;
   margin: 0 auto;
-  
 }
 
 .speakers__item {
@@ -679,7 +672,6 @@
   padding: 60px 0;
   background-color: var(--color-price-bg);
   overflow: hidden;
-  
 }
 
 .price::before,
@@ -809,9 +801,6 @@
   background-color: var(--color-price-button-hover);
 }
 
-
-
-
 .registration {
   position: relative;
   padding: 60px 0;
@@ -903,11 +892,9 @@
 .registration-card__left {
   position: relative;
   width: 100%;
-
 }
 
-
-.registration-card__left::after{
+.registration-card__left::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -939,8 +926,6 @@
 .registration-card__subtitle {
   text-align: center;
 }
-
-
 
 .registration-card__btn {
   width: 85%;
@@ -979,7 +964,6 @@
   text-align: left;
 }
 
-
 .footer__list {
   display: flex;
   justify-content: space-between;
@@ -987,7 +971,8 @@
   padding-bottom: 40px;
 }
 
-.footer__item, .footer_contacts  {
+.footer__item,
+.footer_contacts {
   color: #2e2520;
   font-family: var(--font-text);
   font-size: 16px;
@@ -1005,8 +990,6 @@
   position: relative;
   bottom: -17px;
 }
-
-
 
 /*Саня*/
 /* Іван */
@@ -1282,7 +1265,9 @@ body {
   color: var(--color-text-dark);
   font-size: 18px;
   text-decoration: none;
-  transition: color 0.3s, transform 0.3s ease;
+  transition:
+    color 0.3s,
+    transform 0.3s ease;
 }
 
 .contact__social-link:hover {
@@ -1294,7 +1279,9 @@ body {
   width: 24px;
   height: 24px;
   fill: var(--icon-color);
-  transition: fill 0.3s ease, transform 0.3s ease;
+  transition:
+    fill 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contact__social-link:hover .contact__social-icon {
@@ -1473,8 +1460,6 @@ body {
     top: -39px;
     transform: translateX(-50%);
   }
-
-  
 
   .speakers__name {
     margin-top: 18px;
@@ -1692,24 +1677,24 @@ body {
   }
 
   .speakers__person3 {
-  position: absolute;
+    position: absolute;
     width: 110px;
     height: 110px;
     object-fit: contain;
     left: 57%;
     top: -38px;
     transform: translateX(-50%);
-}
+  }
 
-.speakers__person4 {
-  position: absolute;
+  .speakers__person4 {
+    position: absolute;
     width: 110px;
     height: 110px;
     object-fit: contain;
     left: 49%;
     top: -15px;
     transform: translateX(-50%);
-}
+  }
 
   .speakers__name {
     margin: 14px 0 0;
@@ -1805,8 +1790,8 @@ body {
 
   .registration-card {
     background-image:
-      url("../imgs/donut-registrion-left@1x.png"), url("../imgs/ogrizok@1x.png"),
-      url("../imgs/donut-registrion@1x.png");
+      url("../imgs/donut-registrion-left@1x.png"),
+      url("../imgs/ogrizok@1x.png"), url("../imgs/donut-registrion@1x.png");
     background-position:
       left bottom,
       left,
@@ -1831,24 +1816,23 @@ body {
 
   .registration-card .registration-card__left {
     text-align: right;
-    width:100px;
+    width: 100px;
     height: 154px;
     display: flex;
     justify-content: center;
   }
-   
-  .registration-card__left::after{
+
+  .registration-card__left::after {
     content: "";
     position: absolute;
     width: 1px;
     height: 100%;
     right: -20px;
-    top:0;
+    top: 0;
     background: var(--color-star-inactive);
   }
 
   .registration-card .registration-card__right {
-    
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1993,7 +1977,7 @@ body {
     display: none;
   }
 
-  .burger__btn {
+  .header__menu-btn {
     display: none;
   }
 
@@ -2082,8 +2066,8 @@ body {
 
   .registration-card {
     background-image:
-      url("../imgs/donut-registrion-left@1x.png"), url("../imgs/ogrizok@1x.png"),
-      url("../imgs/donut-registrion@1x.png");
+      url("../imgs/donut-registrion-left@1x.png"),
+      url("../imgs/ogrizok@1x.png"), url("../imgs/donut-registrion@1x.png");
     background-position:
       left bottom,
       left,
@@ -2093,21 +2077,19 @@ body {
       94% 100%,
       44% 100%;
     border-radius: 2px;
- 
   }
 
-  .registration-card__btn{
+  .registration-card__btn {
     margin-left: 0;
   }
 }
 /*Іван*/
 @media (-webkit-min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi),
-       (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .price-card {
-    background-image: url("../imgs/price-background@2x.png"); 
+    background-image: url("../imgs/price-background@2x.png");
     background-size: 300px 218px;
-    
   }
 
   .registration-card {
@@ -2119,13 +2101,12 @@ body {
 }
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
-       (min-width: 768px) and (min-resolution: 192dpi),
-       (min-width: 768px) and (min-resolution: 2dppx) {
+  (min-width: 768px) and (min-resolution: 192dpi),
+  (min-width: 768px) and (min-resolution: 2dppx) {
   .registration-card {
     background-image:
       url("../imgs/donut-registrion-left@2x.png"),
-      url("../imgs/ogrizok@2x.png"),
-      url("../imgs/donut-registrion@2x.jpg");
+      url("../imgs/ogrizok@2x.png"), url("../imgs/donut-registrion@2x.jpg");
     background-position:
       left bottom,
       left,
